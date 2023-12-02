@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef, useEffect } from "react";
 import { Link as LinkRouter } from "react-router-dom";
 import {
   AppBar,
@@ -11,12 +11,21 @@ import {
   Stack,
   Grid,
 } from "@mui/material";
-
+import HeaderHome from "../components/HeaderHome";
 import aledosHero from "../images/gen_2_hero_o.png";
+import videoThumbnail from "../images/kassa_op.jpg";
+import challImage from "../images/aledos_chall_cut.jpg";
 
 export default function HomePage() {
+  const aboutRef = useRef(null);
+
+  useEffect(() => {
+    window.scrollTo(0, 0); // Scroll to the top of the window
+  }, []);
+
   return (
     <>
+      <HeaderHome scrollRef={aboutRef} />
       <Stack
         sx={{
           backgroundColor: "black",
@@ -80,7 +89,7 @@ export default function HomePage() {
                   color: "white",
                   position: "relative",
                   zIndex: 2,
-                  maxWidth: { xs: "70%", sm: "60%", md: "50%" },
+                  maxWidth: { xs: "70%", sm: "65%", md: "60%", lg: "60%" },
                   marginTop: { xs: "5%", md: "5%", lg: "15%" },
                   textAlign: "center",
                   display: "flex",
@@ -142,6 +151,7 @@ export default function HomePage() {
               }}
             >
               <Typography
+                ref={aboutRef}
                 variant="h5"
                 sx={{
                   color: "white",
@@ -171,6 +181,7 @@ export default function HomePage() {
                   display: "flex",
                   fontWeight: "750",
                   paddingTop: 8,
+                  paddingBottom: 14,
                   textShadow: `
       1px 1px 3px rgba(0, 0, 0, 0.1),
       2px 2px 6px rgba(0, 0, 0, 0.2),
@@ -185,7 +196,12 @@ export default function HomePage() {
                 Who am I?
               </Typography>
             </Stack>
-            <Grid container paddingX={3} spacing={3} paddingY={10}>
+            <Grid
+              container
+              paddingX={3}
+              spacing={{ xs: 3, md: 6 }}
+              paddingBottom={14}
+            >
               <Grid
                 item
                 xs={12}
@@ -199,7 +215,7 @@ export default function HomePage() {
                 <Box
                   sx={{
                     width: "100%",
-                    height: "100%",
+                    height: "auto",
                     overflow: "hidden",
                     borderRadius: "10px",
                     display: "flex",
@@ -208,15 +224,110 @@ export default function HomePage() {
                   <video
                     src="https://neace.gg/wp-content/uploads/2022/05/NEACE-Coaching_Video.mp4"
                     controls // Add controls for play, pause, etc.
+                    poster={videoThumbnail}
                     style={{
                       width: "100%",
                       height: "auto",
                       maxHeight: "100%",
+                      borderColor: "white",
+                      border: 1,
                     }}
                   />
                 </Box>
               </Grid>
-              <Grid item xs={12} md={6}></Grid>
+              <Grid item xs={12} md={6}>
+                <Box
+                  sx={{
+                    position: "relative",
+                    width: "100%",
+                    height: "100%",
+                    display: "flex",
+                    flexDirection: "column",
+                    alignItems: { xs: "center", sm: "center", md: "normal" },
+                  }}
+                >
+                  <Typography
+                    variant="h4"
+                    sx={{
+                      color: "white",
+                      textAlign: "center",
+                      display: "flex",
+                      fontWeight: "750",
+                      paddingTop: 3,
+                      textShadow: `
+      1px 1px 3px rgba(0, 0, 0, 0.1),
+      2px 2px 6px rgba(0, 0, 0, 0.2),
+      3px 3px 9px rgba(0, 0, 0, 0.3),
+      4px 4px 12px rgba(0, 0, 0, 0.4),
+      5px 5px 15px rgba(0, 0, 0, 0.5)
+    `,
+                    }}
+                  >
+                    My name is Aledos.
+                  </Typography>
+                  <Typography
+                    variant="h5"
+                    sx={{
+                      color: "white",
+                      textAlign: "center",
+                      display: "flex",
+                      fontWeight: "750",
+                      paddingTop: 3,
+                      textShadow: `
+      1px 1px 3px rgba(0, 0, 0, 0.1),
+      2px 2px 6px rgba(0, 0, 0, 0.2),
+      3px 3px 9px rgba(0, 0, 0, 0.3),
+      4px 4px 12px rgba(0, 0, 0, 0.4),
+      5px 5px 15px rgba(0, 0, 0, 0.5)
+    `,
+                    }}
+                  >
+                    Challenger.
+                  </Typography>
+                  <Typography
+                    variant="h5"
+                    sx={{
+                      color: "white",
+                      display: "flex",
+                      fontWeight: "750",
+                      paddingTop: 3,
+                      textShadow: `
+      1px 1px 3px rgba(0, 0, 0, 0.1),
+      2px 2px 6px rgba(0, 0, 0, 0.2),
+      3px 3px 9px rgba(0, 0, 0, 0.3),
+      4px 4px 12px rgba(0, 0, 0, 0.4),
+      5px 5px 15px rgba(0, 0, 0, 0.5)
+    `,
+                    }}
+                  >
+                    The face of Kassadin.
+                  </Typography>
+                  <Typography
+                    variant="h5"
+                    sx={{
+                      color: "white",
+                      display: "flex",
+                      fontWeight: "750",
+                      textAlign: {
+                        xs: "center",
+                        sm: "left",
+                        md: "left",
+                        lg: "left",
+                      },
+                      paddingTop: 3,
+                      textShadow: `
+      1px 1px 3px rgba(0, 0, 0, 0.1),
+      2px 2px 6px rgba(0, 0, 0, 0.2),
+      3px 3px 9px rgba(0, 0, 0, 0.3),
+      4px 4px 12px rgba(0, 0, 0, 0.4),
+      5px 5px 15px rgba(0, 0, 0, 0.5)
+    `,
+                    }}
+                  >
+                    Working as a professional private coach for 3 years.
+                  </Typography>
+                </Box>
+              </Grid>
             </Grid>
           </Stack>
         </Stack>

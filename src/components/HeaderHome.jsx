@@ -8,10 +8,11 @@ import {
   Typography,
   Button,
   Container,
+  Link,
 } from "@mui/material";
 import logo from "../images/logo_2_no_bg_no_hand_2.png";
 
-export default function Header({ scrollRef }) {
+export default function HeaderHome({ scrollRef }) {
   const scrollToTarget = () => {
     if (scrollRef && scrollRef.current) {
       const position =
@@ -56,7 +57,7 @@ export default function Header({ scrollRef }) {
               width: "100%", // Ensure Toolbar takes the full width of the inner Box
             }}
           >
-            <LinkRouter to="/">
+            <Link href="/">
               <Box
                 component={"img"}
                 src={logo}
@@ -64,7 +65,7 @@ export default function Header({ scrollRef }) {
                 height={{ xs: 80, sm: 130, md: 140, lg: 180 }}
                 sx={{ flexGrow: 0 }}
               />
-            </LinkRouter>
+            </Link>
             <Box sx={{ flexGrow: 1 }} /> {/* Invisible spacer */}
             <Button
               onClick={scrollToTarget}
