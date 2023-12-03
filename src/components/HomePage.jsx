@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from "react";
+import React, { useRef, useLayoutEffect } from "react";
 import { Link as LinkRouter } from "react-router-dom";
 import {
   AppBar,
@@ -19,8 +19,11 @@ import challEmblem from "../images/Challenger_emblem.png";
 export default function HomePage() {
   const aboutRef = useRef(null);
 
-  useEffect(() => {
-    window.scrollTo(0, 0); // Scroll to the top of the window
+  useLayoutEffect(() => {
+    if ("scrollRestoration" in window.history) {
+      window.history.scrollRestoration = "manual";
+    }
+    window.scrollTo(0, 0);
   }, []);
 
   return (
