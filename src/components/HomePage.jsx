@@ -14,7 +14,7 @@ import {
 import HeaderHome from "../components/HeaderHome";
 import aledosHero from "../images/gen_2_hero_o.png";
 import videoThumbnail from "../images/kassa_op.jpg";
-import challImage from "../images/aledos_chall_cut.jpg";
+import challEmblem from "../images/Challenger_emblem.png";
 
 export default function HomePage() {
   const aboutRef = useRef(null);
@@ -231,11 +231,34 @@ export default function HomePage() {
                       maxHeight: "100%",
                       borderColor: "white",
                       border: 1,
+                      zIndex: 2,
                     }}
                   />
                 </Box>
               </Grid>
-              <Grid item xs={12} md={6}>
+              <Grid
+                item
+                xs={12}
+                md={6}
+                sx={{
+                  position: "relative",
+                  "&::before": {
+                    // Create the overlay
+                    content: '""',
+                    position: "absolute",
+                    top: 0,
+                    left: 0,
+                    right: 0,
+                    bottom: 0,
+                    backgroundImage: `url(${challEmblem})`,
+                    backgroundSize: "70%",
+                    backgroundRepeat: "no-repeat",
+                    backgroundPosition: "center",
+                    opacity: 0.2, // Set the desired opacity
+                    zIndex: 0, // Ensure it's above the background but below the content
+                  },
+                }}
+              >
                 <Box
                   sx={{
                     position: "relative",
@@ -324,7 +347,7 @@ export default function HomePage() {
     `,
                     }}
                   >
-                    Working as a professional private coach for 3 years.
+                    Working as a professional private coach since 2019.
                   </Typography>
                 </Box>
               </Grid>
