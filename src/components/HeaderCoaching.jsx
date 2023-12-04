@@ -8,16 +8,19 @@ import {
   Typography,
   Button,
   Container,
+  Link,
 } from "@mui/material";
+import { useScroll } from "./ScrollContext";
+
 import logo from "../images/logo_2_no_bg_no_hand_2.png";
 
-export default function Header({ scrollRef }) {
-  const scrollToTarget = () => {
-    if (scrollRef && scrollRef.current) {
-      const position =
-        scrollRef.current.getBoundingClientRect().top + window.pageYOffset - 70;
-      window.scrollTo({ top: position, behavior: "smooth" });
-    }
+export default function HeaderCoaching({ scrollRef }) {
+  const { setScrollToAbout } = useScroll();
+
+  const handleAboutClick = () => {
+    setTimeout(() => {
+      setScrollToAbout(true);
+    }, 400);
   };
 
   return (
@@ -66,12 +69,17 @@ export default function Header({ scrollRef }) {
               />
             </LinkRouter>
             <Box sx={{ flexGrow: 1 }} /> {/* Invisible spacer */}
-            <Button
-              onClick={scrollToTarget}
-              sx={{
-                marginRight: "2%",
-                color: "white",
-                textShadow: `
+            <LinkRouter
+              to="/"
+              onClick={handleAboutClick}
+              style={{ textDecoration: "none" }}
+            >
+              <Button
+                sx={{
+                  marginRight: "2%",
+                  color: "white",
+                  minWidth: "100px",
+                  textShadow: `
       1px 1px 3px rgba(0, 0, 0, 0.1),
       2px 2px 6px rgba(0, 0, 0, 0.2),
       3px 3px 9px rgba(0, 0, 0, 0.3),
@@ -80,11 +88,12 @@ export default function Header({ scrollRef }) {
       6px 6px 18px rgba(0, 0, 0, 0.6),
       7px 7px 21px rgba(0, 0, 0, 0.7)
     `,
-                display: { xs: "none", md: "block" },
-              }}
-            >
-              About me
-            </Button>
+                  display: { xs: "none", md: "block" },
+                }}
+              >
+                About me
+              </Button>
+            </LinkRouter>
             <Button
               sx={{
                 marginRight: "4%",
@@ -103,21 +112,23 @@ export default function Header({ scrollRef }) {
             >
               Testimonials
             </Button>
-            <Button
-              variant={"contained"}
-              sx={{
-                flexGrow: 0,
-                paddingY: { xs: 1, sm: 1.75 },
-                size: { xs: "medium", sm: "large", md: "large" },
-                textShadow: `
+            <Link href="/">
+              <Button
+                variant={"contained"}
+                sx={{
+                  flexGrow: 0,
+                  paddingY: { xs: 1, sm: 1.75 },
+                  size: { xs: "medium", sm: "large", md: "large" },
+                  textShadow: `
       1px 1px 3px rgba(0, 0, 0, 0.1),
       2px 2px 6px rgba(0, 0, 0, 0.2),
       3px 3px 9px rgba(0, 0, 0, 0.3)
       `,
-              }}
-            >
-              Book now
-            </Button>
+                }}
+              >
+                Home Page
+              </Button>
+            </Link>
           </Toolbar>
         </Box>
       </Box>

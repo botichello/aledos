@@ -7,11 +7,12 @@ import {
   Typography,
   Button,
 } from "@mui/material";
+import HeaderCoaching from "./HeaderCoaching";
 
 export default function CoachingPage() {
   return (
     <>
-      <Typography>Coaching</Typography>
+      <HeaderCoaching></HeaderCoaching>
     </>
   );
 }

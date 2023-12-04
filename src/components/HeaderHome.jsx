@@ -104,21 +104,23 @@ export default function HeaderHome({ scrollRef }) {
             >
               Testimonials
             </Button>
-            <Button
-              variant={"contained"}
-              sx={{
-                flexGrow: 0,
-                paddingY: { xs: 1, sm: 1.75 },
-                size: { xs: "medium", sm: "large", md: "large" },
-                textShadow: `
+            <Link href="/coaching">
+              <Button
+                variant={"contained"}
+                sx={{
+                  flexGrow: 0,
+                  paddingY: { xs: 1, sm: 1.75 },
+                  size: { xs: "medium", sm: "large", md: "large" },
+                  textShadow: `
       1px 1px 3px rgba(0, 0, 0, 0.1),
       2px 2px 6px rgba(0, 0, 0, 0.2),
       3px 3px 9px rgba(0, 0, 0, 0.3)
       `,
-              }}
-            >
-              Book now
-            </Button>
+                }}
+              >
+                Book now
+              </Button>
+            </Link>
           </Toolbar>
         </Box>
       </Box>

@@ -1,4 +1,4 @@
-import React, { useRef, useLayoutEffect } from "react";
+import React, { useRef, useLayoutEffect, useEffect } from "react";
 import { Link as LinkRouter } from "react-router-dom";
 import {
   AppBar,
@@ -12,12 +12,21 @@ import {
   Grid,
 } from "@mui/material";
 import HeaderHome from "../components/HeaderHome";
+import { useScroll } from "./ScrollContext";
 import aledosHero from "../images/gen_2_hero_o.png";
 import videoThumbnail from "../images/kassa_op.jpg";
 import challEmblem from "../images/Challenger_emblem.png";
 
 export default function HomePage() {
+  const { scrollToAbout, setScrollToAbout } = useScroll();
   const aboutRef = useRef(null);
+
+  useEffect(() => {
+    if (scrollToAbout && aboutRef.current) {
+      aboutRef.current.scrollIntoView({ behavior: "smooth" });
+      setScrollToAbout(false); // Reset the state
+    }
+  }, [scrollToAbout, setScrollToAbout]);
 
   useLayoutEffect(() => {
     if ("scrollRestoration" in window.history) {
@@ -316,7 +325,7 @@ export default function HomePage() {
     `,
                       }}
                     >
-                      Challenger.
+                      Ex Challenger.
                     </Typography>
                     <Typography
                       variant="h5"
