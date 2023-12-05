@@ -95,7 +95,7 @@ export default function HeaderCoaching({ scrollRef }) {
             </LinkRouter>
             <Button
               sx={{
-                marginRight: "5.4%",
+                marginRight: "3.9%",
                 color: "white",
                 textShadow: `
       1px 1px 3px rgba(0, 0, 0, 0.1),
@@ -111,7 +111,12 @@ export default function HeaderCoaching({ scrollRef }) {
             >
               Testimonials
             </Button>
-            <Link href="/">
+            <Link
+              href="/"
+              sx={{
+                marginRight: "1.5%",
+              }}
+            >
               <Button
                 variant={"contained"}
                 sx={{
