@@ -72,11 +72,10 @@ export default function HeaderCoaching({ scrollRef }) {
             <LinkRouter
               to="/"
               onClick={handleAboutClick}
-              style={{ textDecoration: "none" }}
+              style={{ textDecoration: "none", marginRight: "2%" }}
             >
               <Button
                 sx={{
-                  marginRight: "2%",
                   color: "white",
                   minWidth: "100px",
                   textShadow: `
@@ -96,7 +95,7 @@ export default function HeaderCoaching({ scrollRef }) {
             </LinkRouter>
             <Button
               sx={{
-                marginRight: "4%",
+                marginRight: "5.4%",
                 color: "white",
                 textShadow: `
       1px 1px 3px rgba(0, 0, 0, 0.1),
