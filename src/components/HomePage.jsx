@@ -83,59 +83,60 @@ export default function HomePage() {
           alignItems={"center"}
           justifyContent={"center"}
         >
-          <Box
-            sx={{
-              position: "relative",
-              backgroundColor: "black",
-              width: "100%",
-              maxWidth: 2100,
-              height: "100%",
-              minHeight: {
-                xs: "25.5rem",
-                sm: "30rem",
-                md: "40rem",
-                lg: "50rem",
-                xl: "60rem",
-              },
-              display: "flex",
-              alignItems: "center", // Vertical alignment
-              justifyContent: "center", // Horizontal alignment
-              "&::before": {
-                content: '""',
-                position: "absolute",
-                top: 0,
-                left: 0,
-                right: 0,
-                bottom: 0,
-                backgroundImage: `url(${aledosHero})`,
-                backgroundSize: { xs: "135% auto", sm: "100% auto" },
-                backgroundRepeat: "no-repeat",
-                backgroundPosition: "center top",
-                opacity: { xs: 0.6, sm: 0.95 },
-              },
-            }}
-          >
-            <Stack
+          <Fade in={true} timeout={300}>
+            <Box
               sx={{
+                position: "relative",
+                backgroundColor: "black",
+                width: "100%",
+                maxWidth: 2100,
+                height: "100%",
+                minHeight: {
+                  xs: "25.5rem",
+                  sm: "30rem",
+                  md: "40rem",
+                  lg: "50rem",
+                  xl: "60rem",
+                },
                 display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
+                alignItems: "center", // Vertical alignment
+                justifyContent: "center", // Horizontal alignment
+                "&::before": {
+                  content: '""',
+                  position: "absolute",
+                  top: 0,
+                  left: 0,
+                  right: 0,
+                  bottom: 0,
+                  backgroundImage: `url(${aledosHero})`,
+                  backgroundSize: { xs: "135% auto", sm: "100% auto" },
+                  backgroundRepeat: "no-repeat",
+                  backgroundPosition: "center top",
+                  opacity: { xs: 0.6, sm: 0.95 },
+                },
               }}
             >
-              <Fade in={true} timeout={600}>
-                <Typography
-                  component="div"
-                  variant={typographyVariant}
-                  sx={{
-                    color: "white",
-                    position: "relative",
-                    zIndex: 2,
-                    maxWidth: { xs: "70%", sm: "65%", md: "60%", lg: "60%" },
-                    marginTop: { xs: "5%", sm: "7%", md: "5%", lg: "15%" },
-                    textAlign: "center",
-                    display: "flex",
-                    fontWeight: "750",
-                    textShadow: `
+              <Stack
+                sx={{
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                }}
+              >
+                <Fade in={true} timeout={700}>
+                  <Typography
+                    component="div"
+                    variant={typographyVariant}
+                    sx={{
+                      color: "white",
+                      position: "relative",
+                      zIndex: 2,
+                      maxWidth: { xs: "70%", sm: "65%", md: "60%", lg: "60%" },
+                      marginTop: { xs: "5%", sm: "7%", md: "5%", lg: "15%" },
+                      textAlign: "center",
+                      display: "flex",
+                      fontWeight: "750",
+                      textShadow: `
       1px 1px 3px rgba(0, 0, 0, 0.1),
       2px 2px 6px rgba(0, 0, 0, 0.2),
       3px 3px 9px rgba(0, 0, 0, 0.3),
@@ -144,24 +145,24 @@ export default function HomePage() {
       6px 6px 18px rgba(0, 0, 0, 0.6),
       7px 7px 21px rgba(0, 0, 0, 0.7)
     `,
-                  }}
-                >
-                  LEAGUE OF LEGENDS PRIVATE COACHING
-                </Typography>
-              </Fade>
-              <Fade in={true} timeout={900}>
-                <Typography
-                  variant="h4"
-                  component="div"
-                  sx={{
-                    color: "primary.secondary",
-                    zIndex: 2,
-                    maxWidth: { xs: "70%", sm: "60%", md: "50%" },
-                    marginTop: "3%",
-                    textAlign: "center",
-                    display: "flex",
-                    fontWeight: "750",
-                    textShadow: `
+                    }}
+                  >
+                    LEAGUE OF LEGENDS PRIVATE COACHING
+                  </Typography>
+                </Fade>
+                <Fade in={true} timeout={1000}>
+                  <Typography
+                    variant="h4"
+                    component="div"
+                    sx={{
+                      color: "primary.secondary",
+                      zIndex: 2,
+                      maxWidth: { xs: "70%", sm: "60%", md: "50%" },
+                      marginTop: "3%",
+                      textAlign: "center",
+                      display: "flex",
+                      fontWeight: "750",
+                      textShadow: `
       1px 1px 3px rgba(0, 0, 0, 0.1),
       2px 2px 6px rgba(0, 0, 0, 0.2),
       3px 3px 9px rgba(0, 0, 0, 0.3),
@@ -172,17 +173,19 @@ export default function HomePage() {
       8px 8px 24px rgba(0, 0, 0, 0.8),
       9px 9px 27px rgba(0, 0, 0, 0.9)
     `,
-                  }}
-                >
-                  UNLOCK YOUR POTENTIAL
-                </Typography>
-              </Fade>
-            </Stack>
-          </Box>
+                    }}
+                  >
+                    UNLOCK YOUR POTENTIAL
+                  </Typography>
+                </Fade>
+              </Stack>
+            </Box>
+          </Fade>
           <Stack
             sx={{
               minWidth: "100%",
-              background: "linear-gradient(to bottom, black, #382145)",
+              // #382145
+              background: "linear-gradient(to bottom, black, #2C1A4C)",
               justifyContent: "center",
               alignItems: "center",
             }}
@@ -214,7 +217,7 @@ export default function HomePage() {
       7px 7px 21px rgba(0, 0, 0, 0.7)
     `,
                   transform: "skew(-12deg)",
-                  opacity: 0.7,
+                  opacity: 0.8,
                 }}
               >
                 "The balance of power must be preserved."
@@ -248,7 +251,7 @@ export default function HomePage() {
             minHeight={800}
             sx={{
               width: "100%",
-              background: "linear-gradient(to bottom, #382145, #141D29)",
+              background: "linear-gradient(to bottom, #2C1A4C, #100F1A)",
               alignItems: "center",
             }}
           >
@@ -281,7 +284,7 @@ export default function HomePage() {
                     borderRadius: "10px",
                     border: 3,
                     borderColor: "#E7D7FF",
-                    opacity: 0.475, // Set the desired opacity
+                    opacity: 0.575, // Set the desired opacity
                     zIndex: 0, // Ensure it's above the background but below the content
                   },
                 }}

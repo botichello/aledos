@@ -20,7 +20,7 @@ export default function HeaderCoaching({ scrollRef }) {
   const handleAboutClick = () => {
     setTimeout(() => {
       setScrollToAbout(true);
-    }, 400);
+    }, 600);
   };
 
   return (
