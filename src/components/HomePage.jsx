@@ -43,7 +43,15 @@ export default function HomePage() {
 
   useEffect(() => {
     if (scrollToAbout && aboutRef.current) {
-      aboutRef.current.scrollIntoView({ behavior: "smooth" });
+      const yOffset = -150; // Number of pixels you want to scroll above the element
+      const elementPosition = aboutRef.current.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset + yOffset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth",
+      });
+
       setScrollToAbout(false); // Reset the state
     }
   }, [scrollToAbout, setScrollToAbout]);

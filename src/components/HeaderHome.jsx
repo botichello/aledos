@@ -16,7 +16,9 @@ export default function HeaderHome({ scrollRef }) {
   const scrollToTarget = () => {
     if (scrollRef && scrollRef.current) {
       const position =
-        scrollRef.current.getBoundingClientRect().top + window.pageYOffset - 70;
+        scrollRef.current.getBoundingClientRect().top +
+        window.pageYOffset -
+        150;
       window.scrollTo({ top: position, behavior: "smooth" });
     }
   };
