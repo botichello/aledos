@@ -148,10 +148,15 @@ export default function CoachingPage() {
                     <CardContent sx={{ flexGrow: 1 }}>
                       {" "}
                       {/* flexGrow to make it expand */}
-                      <Typography gutterBottom variant="h5" component="div">
+                      <Typography
+                        gutterBottom
+                        variant="h5"
+                        fontWeight={600}
+                        component="div"
+                      >
                         First Free Session
                       </Typography>
-                      <Typography variant="body2" color="text.secondary">
+                      <Typography variant="body1" color="text.secondary">
                         - Climbing plan
                       </Typography>
                     </CardContent>
@@ -204,10 +209,15 @@ export default function CoachingPage() {
                     <CardContent sx={{ flexGrow: 1 }}>
                       {" "}
                       {/* flexGrow to make it expand */}
-                      <Typography gutterBottom variant="h5" component="div">
+                      <Typography
+                        gutterBottom
+                        variant="h5"
+                        fontWeight={600}
+                        component="div"
+                      >
                         1 Coaching Session
                       </Typography>
-                      <Typography variant="body2" color="text.secondary">
+                      <Typography variant="body1" color="text.secondary">
                         - Climbing plan
                       </Typography>
                     </CardContent>
@@ -260,10 +270,15 @@ export default function CoachingPage() {
                     <CardContent sx={{ flexGrow: 1 }}>
                       {" "}
                       {/* flexGrow to make it expand */}
-                      <Typography gutterBottom variant="h5" component="div">
+                      <Typography
+                        gutterBottom
+                        variant="h5"
+                        fontWeight={600}
+                        component="div"
+                      >
                         1 Month Private Coaching
                       </Typography>
-                      <Typography variant="body2" color="text.secondary">
+                      <Typography variant="body1" color="text.secondary">
                         - Climbing plan
                       </Typography>
                     </CardContent>
