@@ -166,7 +166,33 @@ const IntroductionSection = () => {
 `,
               }}
             >
-              Working as a professional private coach since 2019.
+              Working as a professional private coach since 2020.
+            </Typography>
+            <Typography
+              variant="h5"
+              sx={{
+                color: "white",
+                display: "flex",
+                fontWeight: "750",
+                textAlign: {
+                  xs: "center",
+                  sm: "left",
+                  md: "left",
+                  lg: "left",
+                },
+                paddingTop: 3,
+                textShadow: `
+1px 1px 3px rgba(0, 0, 0, 0.1),
+2px 2px 6px rgba(0, 0, 0, 0.2),
+3px 3px 9px rgba(0, 0, 0, 0.3),
+4px 4px 12px rgba(0, 0, 0, 0.4),
+5px 5px 15px rgba(0, 0, 0, 0.5),
+6px 6px 18px rgba(0, 0, 0, 0.6),
+7px 7px 21px rgba(0, 0, 0, 0.7)
+`,
+              }}
+            >
+              1000+ coaching sessions.
             </Typography>
           </Box>
         </Grid>

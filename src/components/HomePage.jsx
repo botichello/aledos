@@ -87,7 +87,7 @@ export default function HomePage() {
             <Box
               sx={{
                 position: "relative",
-                backgroundColor: "black",
+                backgroundColor: "#09000F",
                 width: "100%",
                 maxWidth: 2100,
                 height: "100%",
@@ -185,7 +185,7 @@ export default function HomePage() {
             sx={{
               minWidth: "100%",
               // #382145
-              background: "linear-gradient(to bottom, black, #2C1A4C)",
+              background: "linear-gradient(to bottom, #09000F, #2C1A4C)",
               justifyContent: "center",
               alignItems: "center",
             }}
@@ -264,7 +264,7 @@ export default function HomePage() {
             >
               <Box
                 sx={{
-                  width: "calc(100% - 88px)",
+                  width: { xs: "calc(100% - 58px)", md: "calc(100% - 88px)" },
                   height: 500,
                   borderRadius: "10px",
                   display: "flex",
