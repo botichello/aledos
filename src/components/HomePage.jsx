@@ -253,7 +253,7 @@ export default function HomePage() {
             >
               <Box
                 sx={{
-                  width: "calc(100% - 48px)",
+                  width: "calc(100% - 88px)",
                   height: 500,
                   borderRadius: "10px",
                   display: "flex",

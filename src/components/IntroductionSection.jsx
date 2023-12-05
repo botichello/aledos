@@ -24,7 +24,7 @@ const IntroductionSection = () => {
         >
           <Box
             sx={{
-              width: "100%",
+              width: "calc(100% - 48px)",
               height: "auto",
               overflow: "hidden",
               borderRadius: "10px",
@@ -56,7 +56,7 @@ const IntroductionSection = () => {
               // Create the overlay
               content: '""',
               position: "absolute",
-              top: 0,
+              top: 20,
               left: 0,
               right: 0,
               bottom: 0,
