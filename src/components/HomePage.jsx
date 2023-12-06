@@ -19,6 +19,8 @@ import blueFlames from "../images/nice_blue_flames_clean_c.png";
 import IntroductionSection from "./IntroductionSection";
 import theme from "../theme";
 
+import skyImage from "../images/night_bg_small.jpg";
+
 export default function HomePage() {
   const [typographyVariant, setTypographyVariant] = useState("h3");
   const { scrollToAbout, setScrollToAbout } = useScroll();
@@ -185,9 +187,30 @@ export default function HomePage() {
             sx={{
               minWidth: "100%",
               // #382145
-              background: "linear-gradient(to bottom, #09000F, #2C1A4C)",
+              background: "linear-gradient(to bottom, #09000F, #2b1949)",
               justifyContent: "center",
               alignItems: "center",
+              position: "relative", // Needed for the absolute positioning of the pseudo-element
+              "&::before": {
+                // Pseudo-element for the overlay image
+                content: '""',
+                position: "absolute",
+                top: 0,
+                left: 0,
+                right: 0,
+                bottom: 0,
+                backgroundImage: `url(${skyImage})`, // Replace with your image path
+                backgroundSize: "cover",
+                backgroundRepeat: "repeat-y",
+                backgroundPosition: "center",
+                opacity: 0.075, // Set the desired opacity
+                zIndex: 1, // Ensure it's above the background but below the content
+              },
+              "& > *": {
+                // Ensures that children of Stack are above the overlay
+                position: "relative",
+                zIndex: 2,
+              },
             }}
           >
             <Stack
@@ -253,6 +276,27 @@ export default function HomePage() {
               width: "100%",
               background: "linear-gradient(to bottom, #2C1A4C, #100F1A)",
               alignItems: "center",
+              position: "relative", // Needed for the absolute positioning of the pseudo-element
+              "&::before": {
+                // Pseudo-element for the overlay image
+                content: '""',
+                position: "absolute",
+                top: 0,
+                left: 0,
+                right: 0,
+                bottom: 0,
+                backgroundImage: `url(${skyImage})`, // Replace with your image path
+                backgroundSize: "cover",
+                backgroundRepeat: "repeat-y",
+                backgroundPosition: "center",
+                opacity: 0.075, // Set the desired opacity
+                zIndex: 1, // Ensure it's above the background but below the content
+              },
+              "& > *": {
+                // Ensures that children of Stack are above the overlay
+                position: "relative",
+                zIndex: 2,
+              },
             }}
           >
             <Stack
