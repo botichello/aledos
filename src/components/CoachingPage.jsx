@@ -1,4 +1,5 @@
 import React from "react";
+import { Helmet } from "react-helmet";
 import {
   AppBar,
   Box,
@@ -24,6 +25,23 @@ import proPlanImage from "../images/kassa.jpg";
 export default function CoachingPage() {
   return (
     <>
+      <Helmet>
+        <title>
+          League of Legends Private Coaching | LOL Coaching - Aledos Coaching
+        </title>
+        <meta
+          name="description"
+          content="League of Legends Private Coaching by LoL coach Aledos. Unlock your potential."
+        />
+        <meta
+          property="og:title"
+          content="League of Legends Private Coaching | LOL Coaching - Aledos Coaching"
+        />
+        <meta
+          property="og:description"
+          content="League of Legends Private Coaching by LoL coach Aledos. Unlock your potential."
+        />
+      </Helmet>
       <HeaderCoaching></HeaderCoaching>
       <Stack
         sx={{
