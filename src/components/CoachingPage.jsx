@@ -18,6 +18,7 @@ import HeaderCoaching from "./HeaderCoaching";
 import coachingHeroFlames from "../images/coaching_flames_crop_clean_upscaled.png";
 import freePlanImage from "../images/Kassadin_new.jpg";
 import normalPlanImage from "../images/cosmic-kassadin-wallpapers.jpg";
+import skyImage from "../images/night_bg_small.jpg";
 import proPlanImage from "../images/kassa.jpg";
 
 export default function CoachingPage() {
@@ -54,7 +55,7 @@ export default function CoachingPage() {
                   sm: "25rem",
                   md: "35rem",
                   lg: "45rem",
-                  xl: "55rem",
+                  xl: "59rem",
                 },
                 display: "flex",
                 alignItems: "center", // Vertical alignment
@@ -78,17 +79,40 @@ export default function CoachingPage() {
           <Stack
             sx={{
               minWidth: "100%",
-              minHeight: 1000,
-              // #382145
+              minHeight: { xs: 1000, sm: 1000, md: 700, lg: 500 },
               background: "linear-gradient(to bottom, #09000F, #0D1695)",
+              backgroundSize: "100% auto",
+              backgroundRepeat: "no-repeat",
+              backgroundPosition: "center top",
               justifyContent: "center",
               alignItems: "center",
               display: "flex",
+              position: "relative", // Needed for the absolute positioning of the pseudo-element
+              "&::before": {
+                // Pseudo-element for the overlay image
+                content: '""',
+                position: "absolute",
+                top: 0,
+                left: 0,
+                right: 0,
+                bottom: 0,
+                backgroundImage: `url(${skyImage})`, // Replace with your image path
+                backgroundSize: "cover",
+                backgroundRepeat: "repeat-y",
+                backgroundPosition: "center",
+                opacity: 0.3, // Set the desired opacity
+                zIndex: 1, // Ensure it's above the background but below the content
+              },
+              "& > *": {
+                // Ensures that children of Stack are above the overlay
+                position: "relative",
+                zIndex: 2,
+              },
             }}
           >
             <Grid
               container
-              spacing={4}
+              spacing={3}
               justifyContent={"center"}
               display={"flex"}
               height={"100%"}
@@ -98,11 +122,11 @@ export default function CoachingPage() {
                 margin: "auto",
                 position: "absolute",
                 top: {
-                  xs: "16rem",
-                  sm: "18.5rem",
-                  md: "20.5rem",
-                  lg: "25.5rem",
-                  xl: "26.5rem",
+                  xs: "-19rem",
+                  sm: "-24.5rem",
+                  md: "-42rem",
+                  lg: "calc(-60.5rem + 100px)",
+                  xl: "-78.5rem",
                 },
                 left: 0,
                 right: 0,
@@ -114,9 +138,10 @@ export default function CoachingPage() {
                 xs={12}
                 md={6}
                 lg={4}
+                xl={3}
                 display={"flex"}
                 justifyContent="center"
-                sx={{ pr: 4 }}
+                sx={{ pr: 3 }}
               >
                 <Box
                   sx={{
@@ -127,7 +152,7 @@ export default function CoachingPage() {
                 >
                   <Card
                     sx={{
-                      maxWidth: 345,
+                      maxWidth: 300,
                       width: "100%",
                       maxHeight: 400,
                       height: "100%",
@@ -159,6 +184,13 @@ export default function CoachingPage() {
                       <Typography variant="body1" color="text.secondary">
                         - Climbing plan
                       </Typography>
+                      <Typography
+                        variant="h6"
+                        fontWeight={500}
+                        color="text.main"
+                      >
+                        - Free
+                      </Typography>
                     </CardContent>
                     <CardActions sx={{ justifyContent: "flex-end" }}>
                       <Button size="normal" variant="contained">
@@ -173,10 +205,11 @@ export default function CoachingPage() {
                 xs={12}
                 md={6}
                 lg={4}
+                xl={3}
                 display={"flex"}
                 justifyContent="center"
                 sx={{
-                  pr: 4, // Negative vertical margin
+                  pr: 3, // Negative vertical margin
                 }}
               >
                 <Box
@@ -188,7 +221,7 @@ export default function CoachingPage() {
                 >
                   <Card
                     sx={{
-                      maxWidth: 345,
+                      maxWidth: 300,
                       width: "100%",
                       maxHeight: 400,
                       height: "100%",
@@ -220,6 +253,13 @@ export default function CoachingPage() {
                       <Typography variant="body1" color="text.secondary">
                         - Climbing plan
                       </Typography>
+                      <Typography
+                        variant="h6"
+                        fontWeight={500}
+                        color="text.main"
+                      >
+                        - 50 €
+                      </Typography>
                     </CardContent>
                     <CardActions sx={{ justifyContent: "flex-end" }}>
                       <Button size="normal" variant="contained">
@@ -234,10 +274,11 @@ export default function CoachingPage() {
                 xs={12}
                 md={6}
                 lg={4}
+                xl={3}
                 display={"flex"}
                 justifyContent="center"
                 sx={{
-                  pr: 4, // Negative vertical margin
+                  pr: 3, // Negative vertical margin
                 }}
               >
                 <Box
@@ -249,7 +290,7 @@ export default function CoachingPage() {
                 >
                   <Card
                     sx={{
-                      maxWidth: 345,
+                      maxWidth: 300,
                       width: "100%",
                       maxHeight: 400,
                       height: "100%",
@@ -280,6 +321,13 @@ export default function CoachingPage() {
                       </Typography>
                       <Typography variant="body1" color="text.secondary">
                         - Climbing plan
+                      </Typography>
+                      <Typography
+                        variant="h6"
+                        fontWeight={500}
+                        color="text.main"
+                      >
+                        - 200 €
                       </Typography>
                     </CardContent>
                     <CardActions sx={{ justifyContent: "flex-end" }}>
