@@ -79,7 +79,7 @@ export default function CoachingPage() {
           <Stack
             sx={{
               minWidth: "100%",
-              minHeight: { xs: 1000, sm: 1000, md: 700, lg: 500 },
+              minHeight: { xs: 1300, sm: 1000, md: 700, lg: 500 },
               background: "linear-gradient(to bottom, #09000F, #0D1695)",
               backgroundSize: "100% auto",
               backgroundRepeat: "no-repeat",
@@ -122,7 +122,7 @@ export default function CoachingPage() {
                 margin: "auto",
                 position: "absolute",
                 top: {
-                  xs: "-19rem",
+                  xs: "-13rem",
                   sm: "-24.5rem",
                   md: "-42rem",
                   lg: "calc(-60.5rem + 100px)",
@@ -154,7 +154,7 @@ export default function CoachingPage() {
                     sx={{
                       maxWidth: 300,
                       width: "100%",
-                      maxHeight: 400,
+                      maxHeight: 450,
                       height: "100%",
                       borderRadius: "10px",
                       border: 1,
@@ -184,18 +184,27 @@ export default function CoachingPage() {
                       <Typography variant="body1" color="text.secondary">
                         - Climbing plan
                       </Typography>
-                      <Typography
-                        variant="h6"
-                        fontWeight={500}
-                        color="text.main"
-                      >
-                        - Free
-                      </Typography>
                     </CardContent>
-                    <CardActions sx={{ justifyContent: "flex-end" }}>
-                      <Button size="normal" variant="contained">
-                        Learn More
-                      </Button>
+                    <CardActions
+                      sx={{
+                        display: "flex",
+                        justifyContent: "space-between",
+                        alignItems: "center",
+                      }}
+                    >
+                      <Box sx={{ display: "flex", alignItems: "center" }}>
+                        <Typography
+                          variant="h6"
+                          sx={{ fontWeight: 650, color: "text.main", pl: 2 }}
+                        >
+                          Free
+                        </Typography>
+                      </Box>
+                      <Box>
+                        <Button size="normal" variant="contained">
+                          Learn More
+                        </Button>
+                      </Box>
                     </CardActions>
                   </Card>
                 </Box>
@@ -223,7 +232,7 @@ export default function CoachingPage() {
                     sx={{
                       maxWidth: 300,
                       width: "100%",
-                      maxHeight: 400,
+                      maxHeight: 450,
                       height: "100%",
                       borderRadius: "10px",
                       border: 1,
@@ -253,18 +262,27 @@ export default function CoachingPage() {
                       <Typography variant="body1" color="text.secondary">
                         - Climbing plan
                       </Typography>
-                      <Typography
-                        variant="h6"
-                        fontWeight={500}
-                        color="text.main"
-                      >
-                        - 50 €
-                      </Typography>
                     </CardContent>
-                    <CardActions sx={{ justifyContent: "flex-end" }}>
-                      <Button size="normal" variant="contained">
-                        Learn More
-                      </Button>
+                    <CardActions
+                      sx={{
+                        display: "flex",
+                        justifyContent: "space-between",
+                        alignItems: "center",
+                      }}
+                    >
+                      <Box sx={{ display: "flex", alignItems: "center" }}>
+                        <Typography
+                          variant="h6"
+                          sx={{ fontWeight: 650, color: "text.main", pl: 2 }}
+                        >
+                          50 €
+                        </Typography>
+                      </Box>
+                      <Box>
+                        <Button size="normal" variant="contained">
+                          Learn More
+                        </Button>
+                      </Box>
                     </CardActions>
                   </Card>
                 </Box>
@@ -292,7 +310,7 @@ export default function CoachingPage() {
                     sx={{
                       maxWidth: 300,
                       width: "100%",
-                      maxHeight: 400,
+                      maxHeight: 450,
                       height: "100%",
                       borderRadius: "10px",
                       border: 1,
@@ -322,18 +340,36 @@ export default function CoachingPage() {
                       <Typography variant="body1" color="text.secondary">
                         - Climbing plan
                       </Typography>
-                      <Typography
-                        variant="h6"
-                        fontWeight={500}
-                        color="text.main"
-                      >
-                        - 200 €
+                      <Typography variant="body1" color="text.secondary">
+                        - 5 Coaching Sessions
+                      </Typography>
+                      <Typography variant="body1" color="text.secondary">
+                        - Daily Accountability
+                      </Typography>
+                      <Typography variant="body1" color="text.secondary">
+                        ...
                       </Typography>
                     </CardContent>
-                    <CardActions sx={{ justifyContent: "flex-end" }}>
-                      <Button size="normal" variant="contained">
-                        Learn More
-                      </Button>
+                    <CardActions
+                      sx={{
+                        display: "flex",
+                        justifyContent: "space-between",
+                        alignItems: "center",
+                      }}
+                    >
+                      <Box sx={{ display: "flex", alignItems: "center" }}>
+                        <Typography
+                          variant="h6"
+                          sx={{ fontWeight: 650, color: "text.main", pl: 2 }}
+                        >
+                          200 €
+                        </Typography>
+                      </Box>
+                      <Box>
+                        <Button size="normal" variant="contained">
+                          Learn More
+                        </Button>
+                      </Box>
                     </CardActions>
                   </Card>
                 </Box>

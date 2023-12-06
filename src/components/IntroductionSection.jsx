@@ -64,7 +64,7 @@ const IntroductionSection = () => {
               backgroundSize: { xs: "70%", sm: "60%", md: "70%" },
               backgroundRepeat: "no-repeat",
               backgroundPosition: "center",
-              opacity: 0.175, // Set the desired opacity
+              opacity: 0.275, // Set the desired opacity
               zIndex: 0, // Ensure it's above the background but below the content
             },
           }}
