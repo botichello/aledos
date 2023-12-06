@@ -1,4 +1,5 @@
 import React, { useRef, useLayoutEffect, useEffect, useState } from "react";
+import { Helmet } from "react-helmet";
 import { Link as LinkRouter } from "react-router-dom";
 import {
   AppBar,
@@ -67,6 +68,23 @@ export default function HomePage() {
 
   return (
     <>
+      <Helmet>
+        <title>
+          League of Legends Private Coaching | LOL Coaching - Aledos Coaching
+        </title>
+        <meta
+          name="description"
+          content="League of Legends Private Coaching by LoL coach Aledos. Unlock your potential."
+        />
+        <meta
+          property="og:title"
+          content="League of Legends Private Coaching | LOL Coaching - Aledos Coaching"
+        />
+        <meta
+          property="og:description"
+          content="League of Legends Private Coaching by LoL coach Aledos. Unlock your potential."
+        />
+      </Helmet>
       <HeaderHome scrollRef={aboutRef} />
       <Stack
         sx={{
