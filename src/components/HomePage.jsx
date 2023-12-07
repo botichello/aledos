@@ -20,7 +20,7 @@ import blueFlames from "../images/nice_blue_flames_clean_c.png";
 import IntroductionSection from "./IntroductionSection";
 import theme from "../theme";
 
-import skyImage from "../images/night_bg_small.jpg";
+import skyImage from "../images/stars.png";
 
 export default function HomePage() {
   const [typographyVariant, setTypographyVariant] = useState("h3");
@@ -205,7 +205,7 @@ export default function HomePage() {
             sx={{
               minWidth: "100%",
               // #382145
-              background: "linear-gradient(to bottom, #09000F, #2b1949)",
+              background: "linear-gradient(to bottom, #09000F, #2C1A4C)",
               justifyContent: "center",
               alignItems: "center",
               position: "relative", // Needed for the absolute positioning of the pseudo-element
@@ -221,7 +221,7 @@ export default function HomePage() {
                 backgroundSize: "cover",
                 backgroundRepeat: "repeat-y",
                 backgroundPosition: "center",
-                opacity: 0.075, // Set the desired opacity
+                opacity: 0.055, // Set the desired opacity
                 zIndex: 1, // Ensure it's above the background but below the content
               },
               "& > *": {
@@ -307,8 +307,8 @@ export default function HomePage() {
                 backgroundSize: "cover",
                 backgroundRepeat: "repeat-y",
                 backgroundPosition: "center",
-                opacity: 0.075, // Set the desired opacity
-                zIndex: 1, // Ensure it's above the background but below the content
+                opacity: 0.055, // Set the desired opacity
+                zIndex: 2, // Ensure it's above the background but below the content
               },
               "& > *": {
                 // Ensures that children of Stack are above the overlay
@@ -322,13 +322,14 @@ export default function HomePage() {
               width={"100%"}
               display={"flex"}
               alignItems={"center"}
-              paddingTop={10}
+              sx={{ paddingTop: { xs: 4, sm: 8, md: 10 } }}
             >
               <Box
                 sx={{
                   width: { xs: "calc(100% - 58px)", md: "calc(100% - 88px)" },
                   height: 500,
                   borderRadius: "10px",
+                  backgroundColor: "#100F1A",
                   display: "flex",
                   position: "relative",
                   "&::before": {
@@ -346,8 +347,8 @@ export default function HomePage() {
                     borderRadius: "10px",
                     border: 3,
                     borderColor: "#E7D7FF",
-                    opacity: 0.575, // Set the desired opacity
-                    zIndex: 0, // Ensure it's above the background but below the content
+                    opacity: 0.5, // Set the desired opacity
+                    zIndex: 3, // Ensure it's above the background but below the content
                   },
                 }}
               ></Box>

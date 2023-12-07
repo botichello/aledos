@@ -8,9 +8,11 @@ const IntroductionSection = () => {
     <Stack maxWidth={1500} display={"flex"}>
       <Grid
         container
-        paddingX={3}
-        spacing={{ xs: 3, md: 10 }}
+        spacing={{ xs: 3, md: 5, lg: 10 }}
         paddingBottom={10}
+        sx={{
+          paddingX: { xs: 0, sm: 2, md: 2, lg: 3 },
+        }}
       >
         <Grid
           item
