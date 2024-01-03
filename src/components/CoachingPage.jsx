@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Helmet } from "react-helmet";
 import {
   AppBar,
@@ -23,6 +23,24 @@ import skyImage from "../images/night_bg_small.jpg";
 import proPlanImage from "../images/kassa.jpg";
 
 export default function CoachingPage() {
+  const [isCalendlyOpen, setIsCalendlyOpen] = useState(false);
+
+  const openCalendlyPopup = () => {
+    setIsCalendlyOpen(true);
+  };
+
+  useEffect(() => {
+    const closePopup = () => {
+      if (isCalendlyOpen) {
+        setIsCalendlyOpen(false);
+      }
+    };
+
+    window.addEventListener("message", closePopup);
+
+    return () => window.removeEventListener("message", closePopup);
+  }, [isCalendlyOpen]);
+
   return (
     <>
       <Helmet>

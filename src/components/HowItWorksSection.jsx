@@ -56,12 +56,12 @@ const HowItWorksSection = () => {
           }}
         >
           <Stack
-            width="70%"
             sx={{
               position: "relative",
               zIndex: 5,
               alignItems: "center",
               display: "flex",
+              width: { xs: "80%", sm: "75%", md: "70" },
             }}
           >
             <Box
@@ -107,7 +107,7 @@ const HowItWorksSection = () => {
               sx={{
                 color: "white",
                 fontWeight: "650",
-                paddingTop: 6,
+                paddingTop: { xs: 4, sm: 4, md: 6 },
                 textShadow: `
 1px 1px 3px rgba(0, 0, 0, 0.1),
 2px 2px 6px rgba(0, 0, 0, 0.2),
@@ -119,7 +119,6 @@ const HowItWorksSection = () => {
                 zIndex: 10,
                 alignSelf: { xs: "center", md: "normal" },
                 textAlign: { xs: "center", md: "left" },
-                textIndent: "3px",
                 fontSize: "1.1rem",
               }}
             >
@@ -138,12 +137,12 @@ const HowItWorksSection = () => {
           }}
         >
           <Stack
-            width="70%"
             sx={{
               position: "relative",
               zIndex: 5,
               alignItems: "center",
               display: "flex",
+              width: { xs: "80%", sm: "75%", md: "70" },
             }}
           >
             <Box
@@ -151,7 +150,7 @@ const HowItWorksSection = () => {
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
-                paddingTop: 5,
+                paddingTop: { xs: 10, sm: 11, md: 5 },
               }}
             >
               <SchoolIcon
@@ -192,7 +191,7 @@ const HowItWorksSection = () => {
               sx={{
                 color: "white",
                 fontWeight: "650",
-                paddingTop: 6,
+                paddingTop: { xs: 4, sm: 4, md: 6 },
                 textShadow: `
 1px 1px 3px rgba(0, 0, 0, 0.1),
 2px 2px 6px rgba(0, 0, 0, 0.2),
@@ -206,7 +205,6 @@ const HowItWorksSection = () => {
                 zIndex: 10,
                 alignSelf: { xs: "center", md: "normal" },
                 textAlign: { xs: "center", md: "left" },
-                textIndent: "3px",
                 fontSize: "1.1rem",
               }}
             >
@@ -217,7 +215,7 @@ const HowItWorksSection = () => {
               sx={{
                 color: "white",
                 fontWeight: "650",
-                paddingTop: 4,
+                paddingTop: { xs: 3, sm: 4, md: 4 },
                 textShadow: `
 1px 1px 3px rgba(0, 0, 0, 0.1),
 2px 2px 6px rgba(0, 0, 0, 0.2),
@@ -231,7 +229,6 @@ const HowItWorksSection = () => {
                 zIndex: 10,
                 alignSelf: { xs: "center", md: "normal" },
                 textAlign: { xs: "center", md: "left" },
-                textIndent: "3px",
                 fontSize: "1.1rem",
               }}
             >
@@ -256,7 +253,6 @@ const HowItWorksSection = () => {
                 zIndex: 10,
                 alignSelf: { xs: "center", md: "normal" },
                 textAlign: { xs: "center", md: "left" },
-                textIndent: "3px",
                 fontSize: "1.1rem",
               }}
             >
@@ -275,12 +271,12 @@ const HowItWorksSection = () => {
           }}
         >
           <Stack
-            width="70%"
             sx={{
               position: "relative",
               zIndex: 5,
               alignItems: "center",
               display: "flex",
+              width: { xs: "80%", sm: "75%", md: "70" },
             }}
           >
             <Box
@@ -288,7 +284,7 @@ const HowItWorksSection = () => {
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
-                paddingTop: 5,
+                paddingTop: { xs: 10, sm: 11, md: 5 },
               }}
             >
               <EmojiEventsIcon
@@ -332,7 +328,8 @@ const HowItWorksSection = () => {
               sx={{
                 color: "white",
                 fontWeight: "650",
-                paddingTop: 6,
+                paddingTop: { xs: 4, sm: 4, md: 6 },
+                paddingLeft: { xs: 0, sm: 0, md: 3 },
                 textShadow: `
 1px 1px 3px rgba(0, 0, 0, 0.1),
 2px 2px 6px rgba(0, 0, 0, 0.2),
@@ -346,7 +343,6 @@ const HowItWorksSection = () => {
                 zIndex: 10,
                 alignSelf: { xs: "center", md: "normal" },
                 textAlign: { xs: "center", md: "left" },
-                textIndent: "3px",
                 fontSize: "1.1rem",
               }}
             >
@@ -357,7 +353,7 @@ const HowItWorksSection = () => {
               sx={{
                 color: "white",
                 fontWeight: "650",
-                paddingTop: 7,
+                paddingTop: { xs: 6, sm: 6, md: 7 },
                 textShadow: `
 1px 1px 3px rgba(0, 0, 0, 0.1),
 2px 2px 6px rgba(0, 0, 0, 0.2),
@@ -371,7 +367,6 @@ const HowItWorksSection = () => {
                 zIndex: 10,
                 alignSelf: "center",
                 textAlign: "center",
-                textIndent: "3px",
               }}
             >
               Climb to your dream rank.
