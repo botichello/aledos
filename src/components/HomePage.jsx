@@ -152,7 +152,7 @@ export default function HomePage() {
                       position: "relative",
                       zIndex: 2,
                       maxWidth: { xs: "85%", sm: "65%", md: "60%", lg: "60%" },
-                      marginTop: { xs: "5%", sm: "7%", md: "5%", lg: "15%" },
+                      marginTop: { xs: "-5%", sm: "7%", md: "5%", lg: "15%" },
                       textAlign: "center",
                       display: "flex",
                       fontWeight: "750",
