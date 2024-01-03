@@ -150,6 +150,15 @@ export default function CoachingPage() {
                 right: 0,
                 bottom: 0,
                 zIndex: 30,
+                textShadow: `
+                1px 1px 3px rgba(0, 0, 0, 0.1),
+                2px 2px 6px rgba(0, 0, 0, 0.2),
+                3px 3px 9px rgba(0, 0, 0, 0.3),
+                4px 4px 12px rgba(0, 0, 0, 0.4),
+                5px 5px 15px rgba(0, 0, 0, 0.5),
+                6px 6px 18px rgba(0, 0, 0, 0.6),
+                7px 7px 21px rgba(0, 0, 0, 0.7)
+                `,
               }}
             >
               Choose your path
