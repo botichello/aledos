@@ -5,8 +5,12 @@ import blueFlames from "../images/nice_blue_flames_clean_c.png";
 import EditCalendarIcon from "@mui/icons-material/EditCalendar";
 import SchoolIcon from "@mui/icons-material/School";
 import EmojiEventsIcon from "@mui/icons-material/EmojiEvents";
+import useMediaQuery from "@mui/material/useMediaQuery";
+import { useTheme } from "@mui/material/styles";
 
 const HowItWorksSection = () => {
+  const theme = useTheme();
+  const isXsOrSm = useMediaQuery(theme.breakpoints.down("md"));
   return (
     <Box
       sx={{
@@ -122,7 +126,7 @@ const HowItWorksSection = () => {
                 fontSize: "1.1rem",
               }}
             >
-              - Scedule your private coaching now
+              {isXsOrSm ? "" : "- "}Scedule your private coaching now
             </Typography>
           </Stack>
         </Grid>
@@ -208,14 +212,14 @@ const HowItWorksSection = () => {
                 fontSize: "1.1rem",
               }}
             >
-              - Meet me on our scheduled session.
+              {isXsOrSm ? "" : "- "}Meet me on our scheduled session.
             </Typography>
             <Typography
               variant="body1"
               sx={{
                 color: "white",
                 fontWeight: "650",
-                paddingTop: { xs: 2, sm: 3.5, md: 4 },
+                paddingTop: { xs: 2, sm: 3, md: 3 },
                 textShadow: `
 1px 1px 3px rgba(0, 0, 0, 0.1),
 2px 2px 6px rgba(0, 0, 0, 0.2),
@@ -232,14 +236,15 @@ const HowItWorksSection = () => {
                 fontSize: "1.1rem",
               }}
             >
-              - Learn basic fundamentals and deeper concepts.
+              {isXsOrSm ? "" : "- "}Learn basic fundamentals and deeper
+              concepts.
             </Typography>
             <Typography
               variant="body1"
               sx={{
                 color: "white",
                 fontWeight: "650",
-                paddingTop: { xs: 2, sm: 3.5, md: 4 },
+                paddingTop: { xs: 2, sm: 3, md: 3 },
                 textShadow: `
 1px 1px 3px rgba(0, 0, 0, 0.1),
 2px 2px 6px rgba(0, 0, 0, 0.2),
@@ -256,7 +261,7 @@ const HowItWorksSection = () => {
                 fontSize: "1.1rem",
               }}
             >
-              - Set goals.
+              {isXsOrSm ? "" : "- "}Set goals.
             </Typography>
           </Stack>
         </Grid>
@@ -346,7 +351,8 @@ const HowItWorksSection = () => {
                 fontSize: "1.1rem",
               }}
             >
-              - Implement what you have learned from our coaching.
+              {isXsOrSm ? "" : "- "}Implement what you have learned from our
+              coaching.
             </Typography>
             <Typography
               variant="h5"

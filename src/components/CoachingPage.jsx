@@ -21,26 +21,9 @@ import freePlanImage from "../images/Kassadin_new.jpg";
 import normalPlanImage from "../images/cosmic-kassadin-wallpapers.jpg";
 import skyImage from "../images/night_bg_small.jpg";
 import proPlanImage from "../images/kassa.jpg";
+import { PopupButton } from "react-calendly";
 
 export default function CoachingPage() {
-  const [isCalendlyOpen, setIsCalendlyOpen] = useState(false);
-
-  const openCalendlyPopup = () => {
-    setIsCalendlyOpen(true);
-  };
-
-  useEffect(() => {
-    const closePopup = () => {
-      if (isCalendlyOpen) {
-        setIsCalendlyOpen(false);
-      }
-    };
-
-    window.addEventListener("message", closePopup);
-
-    return () => window.removeEventListener("message", closePopup);
-  }, [isCalendlyOpen]);
-
   return (
     <>
       <Helmet>
@@ -240,9 +223,12 @@ export default function CoachingPage() {
                         </Typography>
                       </Box>
                       <Box>
-                        <Button size="normal" variant="contained">
-                          Book Now
-                        </Button>
+                        <PopupButton
+                          url={"https://calendly.com/aledos/climbingplan"}
+                          text="BOOK NOW"
+                          rootElement={document.getElementById("root")}
+                          styles={{ fontWeight: 550 }}
+                        ></PopupButton>
                       </Box>
                     </CardActions>
                   </Card>
@@ -324,9 +310,12 @@ export default function CoachingPage() {
                         </Typography>
                       </Box>
                       <Box>
-                        <Button size="normal" variant="contained">
-                          Book Now
-                        </Button>
+                        <PopupButton
+                          url={"https://calendly.com/aledos/coaching-session"}
+                          text="BOOK NOW"
+                          rootElement={document.getElementById("root")}
+                          styles={{ fontWeight: 550 }}
+                        ></PopupButton>
                       </Box>
                     </CardActions>
                   </Card>
@@ -411,9 +400,12 @@ export default function CoachingPage() {
                         </Typography>
                       </Box>
                       <Box>
-                        <Button size="normal" variant="contained">
-                          Book Now
-                        </Button>
+                        <PopupButton
+                          url={"https://calendly.com/aledos/mentorship"}
+                          text="BOOK NOW"
+                          rootElement={document.getElementById("root")}
+                          styles={{ fontWeight: 550 }}
+                        ></PopupButton>
                       </Box>
                     </CardActions>
                   </Card>
