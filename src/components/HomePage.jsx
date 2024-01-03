@@ -322,7 +322,7 @@ export default function HomePage() {
               width={"100%"}
               display={"flex"}
               alignItems={"center"}
-              sx={{ paddingTop: { xs: 0, sm: 6, md: 10 } }}
+              sx={{ paddingTop: { xs: 0, sm: 4, md: 10 } }}
             >
               <Typography
                 variant="h3"
