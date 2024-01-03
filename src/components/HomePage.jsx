@@ -151,7 +151,7 @@ export default function HomePage() {
                       color: "white",
                       position: "relative",
                       zIndex: 2,
-                      maxWidth: { xs: "70%", sm: "65%", md: "60%", lg: "60%" },
+                      maxWidth: { xs: "85%", sm: "65%", md: "60%", lg: "60%" },
                       marginTop: { xs: "5%", sm: "7%", md: "5%", lg: "15%" },
                       textAlign: "center",
                       display: "flex",
@@ -177,7 +177,7 @@ export default function HomePage() {
                     sx={{
                       color: "primary.secondary",
                       zIndex: 2,
-                      maxWidth: { xs: "70%", sm: "60%", md: "50%" },
+                      maxWidth: { xs: "85%", sm: "60%", md: "50%" },
                       marginTop: "3%",
                       textAlign: "center",
                       display: "flex",
@@ -270,8 +270,8 @@ export default function HomePage() {
                   textAlign: "center",
                   display: "flex",
                   fontWeight: "750",
-                  paddingTop: 8,
-                  paddingBottom: 14,
+                  paddingTop: { xs: 4, sm: 6, md: 8 },
+                  paddingBottom: { xs: 6, sm: 8, md: 10, xl: 12 },
                   textShadow: `
       1px 1px 3px rgba(0, 0, 0, 0.1),
       2px 2px 6px rgba(0, 0, 0, 0.2),
@@ -322,7 +322,7 @@ export default function HomePage() {
               width={"100%"}
               display={"flex"}
               alignItems={"center"}
-              sx={{ paddingTop: { xs: 4, sm: 8, md: 10 } }}
+              sx={{ paddingTop: { xs: 0, sm: 6, md: 10 } }}
             >
               <Box
                 sx={{

@@ -89,7 +89,7 @@ const IntroductionSection = () => {
                 textAlign: "center",
                 display: "flex",
                 fontWeight: "750",
-                paddingTop: 3,
+                paddingTop: { xs: 0, sm: 0, md: 3 },
                 textShadow: `
 1px 1px 3px rgba(0, 0, 0, 0.1),
 2px 2px 6px rgba(0, 0, 0, 0.2),

@@ -202,6 +202,9 @@ export default function CoachingPage() {
                       <Typography variant="body1" color="text.secondary">
                         - Climbing plan
                       </Typography>
+                      <Typography variant="body1" color="text.secondary">
+                        - 30 min
+                      </Typography>
                     </CardContent>
                     <CardActions
                       sx={{
@@ -220,7 +223,7 @@ export default function CoachingPage() {
                       </Box>
                       <Box>
                         <Button size="normal" variant="contained">
-                          Learn More
+                          Book Now
                         </Button>
                       </Box>
                     </CardActions>
@@ -280,6 +283,12 @@ export default function CoachingPage() {
                       <Typography variant="body1" color="text.secondary">
                         - Climbing plan
                       </Typography>
+                      <Typography variant="body1" color="text.secondary">
+                        - Complete VOD review
+                      </Typography>
+                      <Typography variant="body1" color="text.secondary">
+                        - 1:30 hour
+                      </Typography>
                     </CardContent>
                     <CardActions
                       sx={{
@@ -298,7 +307,7 @@ export default function CoachingPage() {
                       </Box>
                       <Box>
                         <Button size="normal" variant="contained">
-                          Learn More
+                          Book Now
                         </Button>
                       </Box>
                     </CardActions>
@@ -385,7 +394,7 @@ export default function CoachingPage() {
                       </Box>
                       <Box>
                         <Button size="normal" variant="contained">
-                          Learn More
+                          Book Now
                         </Button>
                       </Box>
                     </CardActions>
