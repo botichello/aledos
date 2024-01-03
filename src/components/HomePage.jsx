@@ -129,7 +129,7 @@ export default function HomePage() {
                   right: 0,
                   bottom: 0,
                   backgroundImage: `url(${aledosHero})`,
-                  backgroundSize: { xs: "135% auto", sm: "100% auto" },
+                  backgroundSize: { xs: "140% auto", sm: "100% auto" },
                   backgroundRepeat: "no-repeat",
                   backgroundPosition: "center top",
                   opacity: { xs: 0.6, sm: 0.95 },
