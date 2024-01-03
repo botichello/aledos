@@ -129,6 +129,31 @@ export default function CoachingPage() {
               },
             }}
           >
+            <Typography
+              variant="h3"
+              sx={{
+                margin: "auto",
+                position: "absolute",
+                height: 100,
+                textAlign: "center",
+                color: "white",
+                fontWeight: 600,
+                paddingX: { xs: 3, sm: 4, md: 5 },
+                top: {
+                  xs: "-102rem",
+                  sm: "-85.5rem",
+                  md: "-87rem",
+                  lg: "-94rem",
+                  xl: "-122rem",
+                },
+                left: 0,
+                right: 0,
+                bottom: 0,
+                zIndex: 30,
+              }}
+            >
+              Choose your path
+            </Typography>
             <Grid
               container
               spacing={3}
@@ -141,9 +166,9 @@ export default function CoachingPage() {
                 margin: "auto",
                 position: "absolute",
                 top: {
-                  xs: "-13rem",
-                  sm: "-24.5rem",
-                  md: "-42rem",
+                  xs: "-18rem",
+                  sm: "-18.5rem",
+                  md: "-37rem",
                   lg: "calc(-60.5rem + 100px)",
                   xl: "-78.5rem",
                 },
@@ -157,7 +182,6 @@ export default function CoachingPage() {
                 xs={12}
                 md={6}
                 lg={4}
-                xl={3}
                 display={"flex"}
                 justifyContent="center"
                 sx={{ pr: 3 }}
@@ -171,9 +195,9 @@ export default function CoachingPage() {
                 >
                   <Card
                     sx={{
-                      maxWidth: 300,
+                      maxWidth: 350,
                       width: "100%",
-                      maxHeight: 450,
+                      maxHeight: 500,
                       height: "100%",
                       borderRadius: "10px",
                       border: 1,
@@ -186,7 +210,7 @@ export default function CoachingPage() {
                     <CardMedia
                       component="img"
                       alt="free"
-                      height="190"
+                      height="220"
                       image={freePlanImage}
                     />
                     <CardContent sx={{ flexGrow: 1 }}>
@@ -198,7 +222,7 @@ export default function CoachingPage() {
                         fontWeight={600}
                         component="div"
                       >
-                        First Free Session
+                        Free Climbing Plan
                       </Typography>
                       <Typography variant="body1" color="text.secondary">
                         - Climbing plan
@@ -239,7 +263,6 @@ export default function CoachingPage() {
                 xs={12}
                 md={6}
                 lg={4}
-                xl={3}
                 display={"flex"}
                 justifyContent="center"
                 sx={{
@@ -255,9 +278,9 @@ export default function CoachingPage() {
                 >
                   <Card
                     sx={{
-                      maxWidth: 300,
+                      maxWidth: 350,
                       width: "100%",
-                      maxHeight: 450,
+                      maxHeight: 500,
                       height: "100%",
                       borderRadius: "10px",
                       border: 1,
@@ -270,7 +293,7 @@ export default function CoachingPage() {
                     <CardMedia
                       component="img"
                       alt="free"
-                      height="190"
+                      height="220"
                       image={normalPlanImage}
                     />
                     <CardContent sx={{ flexGrow: 1 }}>
@@ -282,7 +305,7 @@ export default function CoachingPage() {
                         fontWeight={600}
                         component="div"
                       >
-                        1 Coaching Session
+                        1 on 1 Coaching Session (Midlane)
                       </Typography>
                       <Typography variant="body1" color="text.secondary">
                         - Climbing plan
@@ -326,7 +349,6 @@ export default function CoachingPage() {
                 xs={12}
                 md={6}
                 lg={4}
-                xl={3}
                 display={"flex"}
                 justifyContent="center"
                 sx={{
@@ -342,9 +364,9 @@ export default function CoachingPage() {
                 >
                   <Card
                     sx={{
-                      maxWidth: 300,
+                      maxWidth: 350,
                       width: "100%",
-                      maxHeight: 450,
+                      maxHeight: 500,
                       height: "100%",
                       borderRadius: "10px",
                       border: 1,
@@ -357,7 +379,7 @@ export default function CoachingPage() {
                     <CardMedia
                       component="img"
                       alt="free"
-                      height="190"
+                      height="220"
                       image={proPlanImage}
                     />
                     <CardContent sx={{ flexGrow: 1 }}>
@@ -369,7 +391,7 @@ export default function CoachingPage() {
                         fontWeight={600}
                         component="div"
                       >
-                        1 Month Private Coaching
+                        Monthly Mentorship (Midlane)
                       </Typography>
                       <Typography variant="body1" color="text.secondary">
                         - Climbing plan

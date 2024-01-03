@@ -17,6 +17,7 @@ const HowItWorksSection = () => {
         width: { xs: "calc(100% - 58px)", md: "calc(100% - 88px)" },
         borderRadius: "10px",
         paddingBottom: 6,
+        marginBottom: 6,
         backgroundColor: "#100F1A",
         display: "flex",
         position: "relative",
