@@ -83,6 +83,8 @@ export default function HeaderHome({ scrollRef }) {
       6px 6px 18px rgba(0, 0, 0, 0.6),
       7px 7px 21px rgba(0, 0, 0, 0.7)
     `,
+                fontWeight: 650,
+                letterSpacing: 0.3,
                 display: { xs: "none", md: "block" },
               }}
             >
@@ -101,6 +103,8 @@ export default function HeaderHome({ scrollRef }) {
       6px 6px 18px rgba(0, 0, 0, 0.6),
       7px 7px 21px rgba(0, 0, 0, 0.7)
     `,
+                fontWeight: 650,
+                letterSpacing: 0.3,
                 display: { xs: "none", md: "block" },
               }}
             >
@@ -118,6 +122,8 @@ export default function HeaderHome({ scrollRef }) {
       2px 2px 6px rgba(0, 0, 0, 0.2),
       3px 3px 9px rgba(0, 0, 0, 0.3)
       `,
+                  fontWeight: 650,
+                  letterSpacing: 0.3,
                 }}
               >
                 Book now

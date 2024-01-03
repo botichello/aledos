@@ -72,7 +72,7 @@ export default function HeaderCoaching({ scrollRef }) {
             <LinkRouter
               to="/"
               onClick={handleAboutClick}
-              style={{ textDecoration: "none", marginRight: "2%" }}
+              style={{ textDecoration: "none", marginRight: "1.72%" }}
             >
               <Button
                 sx={{
@@ -88,6 +88,8 @@ export default function HeaderCoaching({ scrollRef }) {
       7px 7px 21px rgba(0, 0, 0, 0.7)
     `,
                   display: { xs: "none", md: "block" },
+                  fontWeight: 650,
+                  letterSpacing: 0.3,
                 }}
               >
                 About me
@@ -95,7 +97,7 @@ export default function HeaderCoaching({ scrollRef }) {
             </LinkRouter>
             <Button
               sx={{
-                marginRight: "3.9%",
+                marginRight: "3.82%",
                 color: "white",
                 textShadow: `
       1px 1px 3px rgba(0, 0, 0, 0.1),
@@ -106,17 +108,14 @@ export default function HeaderCoaching({ scrollRef }) {
       6px 6px 18px rgba(0, 0, 0, 0.6),
       7px 7px 21px rgba(0, 0, 0, 0.7)
     `,
+                fontWeight: 650,
+                letterSpacing: 0.3,
                 display: { xs: "none", md: "block" },
               }}
             >
               Testimonials
             </Button>
-            <Link
-              href="/"
-              sx={{
-                marginRight: "1.5%",
-              }}
-            >
+            <Link href="/" sx={{}}>
               <Button
                 variant={"contained"}
                 sx={{
@@ -128,6 +127,8 @@ export default function HeaderCoaching({ scrollRef }) {
       2px 2px 6px rgba(0, 0, 0, 0.2),
       3px 3px 9px rgba(0, 0, 0, 0.3)
       `,
+                  fontWeight: 650,
+                  letterSpacing: 0.3,
                 }}
               >
                 Home Page
