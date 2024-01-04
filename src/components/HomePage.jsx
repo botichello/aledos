@@ -289,7 +289,7 @@ export default function HomePage() {
             <IntroductionSection />
           </Stack>
           <Stack
-            minHeight={800}
+            minHeight={600}
             sx={{
               width: "100%",
               background: "linear-gradient(to bottom, #2C1A4C, #100F1A)",
@@ -322,7 +322,7 @@ export default function HomePage() {
               width={"100%"}
               display={"flex"}
               alignItems={"center"}
-              sx={{ paddingTop: { xs: 0, sm: 4, md: 10 } }}
+              sx={{ paddingTop: { xs: 0, sm: 4, md: 6 } }}
             >
               <Typography
                 variant="h3"

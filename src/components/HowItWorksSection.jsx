@@ -220,7 +220,7 @@ const HowItWorksSection = () => {
               sx={{
                 color: "white",
                 fontWeight: "650",
-                paddingTop: { xs: 2, sm: 3, md: 3 },
+                paddingTop: { xs: 2.5, sm: 3, md: 3 },
                 textShadow: `
 1px 1px 3px rgba(0, 0, 0, 0.1),
 2px 2px 6px rgba(0, 0, 0, 0.2),
@@ -245,7 +245,7 @@ const HowItWorksSection = () => {
               sx={{
                 color: "white",
                 fontWeight: "650",
-                paddingTop: { xs: 2, sm: 3, md: 3 },
+                paddingTop: { xs: 2.5, sm: 3, md: 3 },
                 textShadow: `
 1px 1px 3px rgba(0, 0, 0, 0.1),
 2px 2px 6px rgba(0, 0, 0, 0.2),

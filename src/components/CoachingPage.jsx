@@ -219,8 +219,10 @@ export default function CoachingPage() {
                     <CardMedia
                       component="img"
                       alt="free"
-                      height="220"
                       image={freePlanImage}
+                      sx={{
+                        height: { xs: 190, sm: 210, md: 220 },
+                      }}
                     />
                     <CardContent sx={{ flexGrow: 1 }}>
                       {" "}
@@ -260,7 +262,17 @@ export default function CoachingPage() {
                           url={"https://calendly.com/aledos/climbingplan"}
                           text="BOOK NOW"
                           rootElement={document.getElementById("root")}
-                          styles={{ fontWeight: 550 }}
+                          styles={{
+                            fontWeight: 550,
+                            boxShadow: "0 0 0.5rem rgba(0, 0, 0, 0.3)",
+                            color: "#fff",
+                            backgroundColor: "#58336D",
+                            border: 0,
+                            outline: 0,
+                            padding: "0.8rem 1.2rem",
+                            fontSize: "0.9rem",
+                            borderRadius: "0.25rem",
+                          }}
                         ></PopupButton>
                       </Box>
                     </CardActions>
@@ -302,8 +314,10 @@ export default function CoachingPage() {
                     <CardMedia
                       component="img"
                       alt="free"
-                      height="220"
                       image={normalPlanImage}
+                      sx={{
+                        height: { xs: 190, sm: 210, md: 220 },
+                      }}
                     />
                     <CardContent sx={{ flexGrow: 1 }}>
                       {" "}
@@ -346,7 +360,17 @@ export default function CoachingPage() {
                           url={"https://calendly.com/aledos/coaching-session"}
                           text="BOOK NOW"
                           rootElement={document.getElementById("root")}
-                          styles={{ fontWeight: 550 }}
+                          styles={{
+                            fontWeight: 550,
+                            boxShadow: "0 0 0.5rem rgba(0, 0, 0, 0.3)",
+                            color: "#fff",
+                            backgroundColor: "#58336D",
+                            border: 0,
+                            outline: 0,
+                            padding: "0.8rem 1.2rem",
+                            fontSize: "0.9rem",
+                            borderRadius: "0.25rem",
+                          }}
                         ></PopupButton>
                       </Box>
                     </CardActions>
@@ -388,8 +412,10 @@ export default function CoachingPage() {
                     <CardMedia
                       component="img"
                       alt="free"
-                      height="220"
                       image={proPlanImage}
+                      sx={{
+                        height: { xs: 190, sm: 210, md: 220 },
+                      }}
                     />
                     <CardContent sx={{ flexGrow: 1 }}>
                       {" "}
@@ -435,7 +461,17 @@ export default function CoachingPage() {
                           url={"https://calendly.com/aledos/mentorship"}
                           text="BOOK NOW"
                           rootElement={document.getElementById("root")}
-                          styles={{ fontWeight: 550 }}
+                          styles={{
+                            fontWeight: 550,
+                            boxShadow: "0 0 0.5rem rgba(0, 0, 0, 0.3)",
+                            color: "#fff",
+                            backgroundColor: "#58336D",
+                            border: 0,
+                            outline: 0,
+                            padding: "0.8rem 1.2rem",
+                            fontSize: "0.9rem",
+                            borderRadius: "0.25rem",
+                          }}
                         ></PopupButton>
                       </Box>
                     </CardActions>
