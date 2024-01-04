@@ -272,6 +272,7 @@ export default function CoachingPage() {
                             padding: "0.8rem 1.2rem",
                             fontSize: "0.9rem",
                             borderRadius: "0.25rem",
+                            cursor: "pointer",
                           }}
                         ></PopupButton>
                       </Box>
@@ -370,6 +371,7 @@ export default function CoachingPage() {
                             padding: "0.8rem 1.2rem",
                             fontSize: "0.9rem",
                             borderRadius: "0.25rem",
+                            cursor: "pointer",
                           }}
                         ></PopupButton>
                       </Box>
@@ -471,6 +473,7 @@ export default function CoachingPage() {
                             padding: "0.8rem 1.2rem",
                             fontSize: "0.9rem",
                             borderRadius: "0.25rem",
+                            cursor: "pointer",
                           }}
                         ></PopupButton>
                       </Box>
