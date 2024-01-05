@@ -12,11 +12,18 @@ import {
 } from "@mui/material";
 import logo from "../images/logo_2_no_bg_no_hand_2.png";
 
-export default function HeaderHome({ scrollRef }) {
-  const scrollToTarget = () => {
-    if (scrollRef && scrollRef.current) {
+export default function HeaderHome({ aboutRef, testimonialRef }) {
+  const scrollToAbout = () => {
+    if (aboutRef && aboutRef.current) {
       const position =
-        scrollRef.current.getBoundingClientRect().top +
+        aboutRef.current.getBoundingClientRect().top + window.pageYOffset - 150;
+      window.scrollTo({ top: position, behavior: "smooth" });
+    }
+  };
+  const scrollToTestimonials = () => {
+    if (testimonialRef && testimonialRef.current) {
+      const position =
+        testimonialRef.current.getBoundingClientRect().top +
         window.pageYOffset -
         150;
       window.scrollTo({ top: position, behavior: "smooth" });
@@ -70,7 +77,7 @@ export default function HeaderHome({ scrollRef }) {
             </Link>
             <Box sx={{ flexGrow: 1 }} /> {/* Invisible spacer */}
             <Button
-              onClick={scrollToTarget}
+              onClick={scrollToAbout}
               sx={{
                 marginRight: "2%",
                 color: "white",
@@ -91,6 +98,7 @@ export default function HeaderHome({ scrollRef }) {
               About me
             </Button>
             <Button
+              onClick={scrollToTestimonials}
               sx={{
                 marginRight: "4%",
                 color: "white",

@@ -16,10 +16,16 @@ import logo from "../images/logo_2_no_bg_no_hand_2.png";
 
 export default function HeaderCoaching({ scrollRef }) {
   const { setScrollToAbout } = useScroll();
+  const { setScrollToTestimonials } = useScroll();
 
   const handleAboutClick = () => {
     setTimeout(() => {
       setScrollToAbout(true);
+    }, 600);
+  };
+  const handleTestimonialsClick = () => {
+    setTimeout(() => {
+      setScrollToTestimonials(true);
     }, 600);
   };
 
@@ -95,11 +101,15 @@ export default function HeaderCoaching({ scrollRef }) {
                 About me
               </Button>
             </LinkRouter>
-            <Button
-              sx={{
-                marginRight: "3.82%",
-                color: "white",
-                textShadow: `
+            <LinkRouter
+              to="/"
+              onClick={handleTestimonialsClick}
+              style={{ textDecoration: "none", marginRight: "3.82%" }}
+            >
+              <Button
+                sx={{
+                  color: "white",
+                  textShadow: `
       1px 1px 3px rgba(0, 0, 0, 0.1),
       2px 2px 6px rgba(0, 0, 0, 0.2),
       3px 3px 9px rgba(0, 0, 0, 0.3),
@@ -108,13 +118,14 @@ export default function HeaderCoaching({ scrollRef }) {
       6px 6px 18px rgba(0, 0, 0, 0.6),
       7px 7px 21px rgba(0, 0, 0, 0.7)
     `,
-                fontWeight: 650,
-                letterSpacing: 0.3,
-                display: { xs: "none", md: "block" },
-              }}
-            >
-              Testimonials
-            </Button>
+                  fontWeight: 650,
+                  letterSpacing: 0.3,
+                  display: { xs: "none", md: "block" },
+                }}
+              >
+                Testimonials
+              </Button>
+            </LinkRouter>
             <Link href="/" sx={{}}>
               <Button
                 variant={"contained"}

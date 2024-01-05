@@ -27,6 +27,8 @@ export default function HomePage() {
   const [typographyVariant, setTypographyVariant] = useState("h3");
   const { scrollToAbout, setScrollToAbout } = useScroll();
   const aboutRef = useRef(null);
+  const { scrollToTestimonials, setScrollToTestimonials } = useScroll();
+  const testimonialRef = useRef(null);
 
   useEffect(() => {
     const updateVariant = () => {
@@ -60,6 +62,22 @@ export default function HomePage() {
     }
   }, [scrollToAbout, setScrollToAbout]);
 
+  useEffect(() => {
+    if (scrollToTestimonials && testimonialRef.current) {
+      const yOffset = -150; // Number of pixels you want to scroll above the element
+      const elementPosition =
+        testimonialRef.current.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset + yOffset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth",
+      });
+
+      setScrollToTestimonials(false); // Reset the state
+    }
+  }, [scrollToTestimonials, setScrollToTestimonials]);
+
   useLayoutEffect(() => {
     if ("scrollRestoration" in window.history) {
       window.history.scrollRestoration = "manual";
@@ -86,7 +104,7 @@ export default function HomePage() {
           content="League of Legends Private Coaching by LoL coach Aledos. Unlock your potential."
         />
       </Helmet>
-      <HeaderHome scrollRef={aboutRef} />
+      <HeaderHome aboutRef={aboutRef} testimonialRef={testimonialRef} />
       <Stack
         sx={{
           backgroundColor: "black",
@@ -386,6 +404,7 @@ export default function HomePage() {
               sx={{ paddingTop: { xs: 0, sm: 4, md: 6 } }}
             >
               <Typography
+                ref={testimonialRef}
                 variant="h3"
                 sx={{
                   color: "white",
