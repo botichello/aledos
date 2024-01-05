@@ -350,7 +350,6 @@ export default function HomePage() {
             </Stack>
           </Stack>
           <Stack
-            minHeight={800}
             sx={{
               width: "100%",
               background: "linear-gradient(to bottom, #100F1A, #4C2CBF)",
