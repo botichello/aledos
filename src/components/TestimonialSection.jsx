@@ -29,6 +29,7 @@ const TestimonialSection = () => {
       <Carousel
         autoPlay
         infiniteLoop
+        interval={7000}
         showStatus={false}
         renderArrowPrev={(clickHandler, hasPrev) => {
           return hasPrev ? (
