@@ -25,6 +25,12 @@ const IntroductionSection = () => {
           }}
         >
           <Box
+            component={"img"}
+            src={videoThumbnail}
+            // kivenni a bordert!
+            border={1.5}
+            borderColor={"#CBC2D7"}
+            //
             sx={{
               width: "calc(100% - 48px)",
               height: "auto",
@@ -33,7 +39,7 @@ const IntroductionSection = () => {
               display: "flex",
             }}
           >
-            <video
+            {/* <video
               src="https://neace.gg/wp-content/uploads/2022/05/NEACE-Coaching_Video.mp4"
               controls // Add controls for play, pause, etc.
               poster={videoThumbnail}
@@ -45,7 +51,7 @@ const IntroductionSection = () => {
                 border: 1,
                 zIndex: 2,
               }}
-            />
+            /> */}
           </Box>
         </Grid>
         <Grid
