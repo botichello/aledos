@@ -98,7 +98,8 @@ export default function CoachingPage() {
           <Stack
             sx={{
               minWidth: "100%",
-              minHeight: { xs: 1300, sm: 1000, md: 700, lg: 500 },
+              minHeight: { xs: 1500, sm: 1500, md: 700, lg: 500 },
+              height: "100%",
               background: "linear-gradient(to bottom, #09000F, #0D1695)",
               backgroundSize: "100% auto",
               backgroundRepeat: "no-repeat",
@@ -140,8 +141,8 @@ export default function CoachingPage() {
                 fontWeight: 600,
                 paddingX: { xs: 3, sm: 4, md: 5 },
                 top: {
-                  xs: "-102rem",
-                  sm: "-85.5rem",
+                  xs: "-114rem",
+                  sm: "-117rem",
                   md: "-87rem",
                   lg: "-94rem",
                   xl: "-122rem",
@@ -171,7 +172,7 @@ export default function CoachingPage() {
               height={"100%"}
               sx={{
                 maxWidth: { xs: 2042, md: 1972 },
-                width: { xs: "calc(100% - 58px)", md: "calc(100% - 128px)" },
+                width: { xs: "calc(100% - 45px)", md: "calc(100% - 128px)" },
                 margin: "auto",
                 position: "absolute",
                 top: {
