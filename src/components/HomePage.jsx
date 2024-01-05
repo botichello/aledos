@@ -21,6 +21,7 @@ import HowItWorksSection from "./HowItWorksSection";
 import theme from "../theme";
 
 import skyImage from "../images/stars.png";
+import TestimonialSection from "./TestimonialSection";
 
 export default function HomePage() {
   const [typographyVariant, setTypographyVariant] = useState("h3");
@@ -347,6 +348,67 @@ export default function HomePage() {
                 How it works?
               </Typography>
               <HowItWorksSection />
+            </Stack>
+          </Stack>
+          <Stack
+            minHeight={500}
+            sx={{
+              width: "100%",
+              background: "linear-gradient(to bottom, #100F1A, #4C2CBF)",
+              alignItems: "center",
+              position: "relative", // Needed for the absolute positioning of the pseudo-element
+              "&::before": {
+                // Pseudo-element for the overlay image
+                content: '""',
+                position: "absolute",
+                top: 0,
+                left: 0,
+                right: 0,
+                bottom: 0,
+                backgroundImage: `url(${skyImage})`, // Replace with your image path
+                backgroundSize: "cover",
+                backgroundRepeat: "repeat-y",
+                backgroundPosition: "center",
+                opacity: 0.055, // Set the desired opacity
+                zIndex: 2, // Ensure it's above the background but below the content
+              },
+              "& > *": {
+                // Ensures that children of Stack are above the overlay
+                position: "relative",
+                zIndex: 2,
+              },
+            }}
+          >
+            <Stack
+              maxWidth={1500}
+              width={"100%"}
+              display={"flex"}
+              alignItems={"center"}
+              sx={{ paddingTop: { xs: 0, sm: 4, md: 6 } }}
+            >
+              <Typography
+                variant="h3"
+                sx={{
+                  color: "white",
+                  textAlign: "center",
+                  display: "flex",
+                  fontWeight: "750",
+                  paddingTop: { xs: 2, sm: 3, md: 4 },
+                  paddingBottom: { xs: 6, sm: 8, md: 10, xl: 12 },
+                  textShadow: `
+      1px 1px 3px rgba(0, 0, 0, 0.1),
+      2px 2px 6px rgba(0, 0, 0, 0.2),
+      3px 3px 9px rgba(0, 0, 0, 0.3),
+      4px 4px 12px rgba(0, 0, 0, 0.4),
+      5px 5px 15px rgba(0, 0, 0, 0.5),
+      6px 6px 18px rgba(0, 0, 0, 0.6),
+      7px 7px 21px rgba(0, 0, 0, 0.7)
+    `,
+                }}
+              >
+                Hear from the Summoners
+              </Typography>
+              <TestimonialSection />
             </Stack>
           </Stack>
         </Stack>
