@@ -30,6 +30,7 @@ const TestimonialSection = () => {
         infiniteLoop
         interval={7000}
         showStatus={false}
+        swipeable={false}
         renderArrowPrev={(clickHandler, hasPrev) => {
           return hasPrev ? (
             <div
