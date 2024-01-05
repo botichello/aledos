@@ -100,7 +100,7 @@ export default function HomePage() {
         <Stack
           maxWidth={2000}
           display={"flex"}
-          minWidth={"100%"}
+          width={"100%"}
           alignItems={"center"}
           justifyContent={"center"}
         >
@@ -204,7 +204,6 @@ export default function HomePage() {
           </Fade>
           <Stack
             sx={{
-              minWidth: "100%",
               // #382145
               background: "linear-gradient(to bottom, #09000F, #2C1A4C)",
               justifyContent: "center",
@@ -237,7 +236,6 @@ export default function HomePage() {
                 alignItems: "center",
                 justifyContent: "center",
                 display: "flex",
-                minWidth: "100%",
                 width: "100%",
               }}
             >
@@ -249,6 +247,7 @@ export default function HomePage() {
                   textAlign: "center",
                   display: "flex",
                   fontWeight: "750",
+                  paddingX: 1,
                   textShadow: `
       1px 1px 3px rgba(0, 0, 0, 0.1),
       2px 2px 6px rgba(0, 0, 0, 0.2),
@@ -351,7 +350,7 @@ export default function HomePage() {
             </Stack>
           </Stack>
           <Stack
-            minHeight={500}
+            minHeight={800}
             sx={{
               width: "100%",
               background: "linear-gradient(to bottom, #100F1A, #4C2CBF)",
@@ -394,6 +393,7 @@ export default function HomePage() {
                   display: "flex",
                   fontWeight: "750",
                   paddingTop: { xs: 2, sm: 3, md: 4 },
+                  paddingX: 3,
                   paddingBottom: { xs: 6, sm: 8, md: 10, xl: 12 },
                   textShadow: `
       1px 1px 3px rgba(0, 0, 0, 0.1),
