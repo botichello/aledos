@@ -205,6 +205,7 @@ export default function HomePage() {
           <Stack
             sx={{
               // #382145
+              width: "100%",
               background: "linear-gradient(to bottom, #09000F, #2C1A4C)",
               justifyContent: "center",
               alignItems: "center",
