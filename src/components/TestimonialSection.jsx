@@ -2,6 +2,8 @@ import React from "react";
 import testimonial_chall from "../images/testimonial_chall.png";
 import testimonial_gm from "../images/testimonial_gm.png";
 import kende from "../images/kende.png";
+import nyle from "../images/nyle.png";
+import janosch from "../images/janosch.png";
 import {
   Stack,
   Box,
@@ -22,7 +24,7 @@ const TestimonialSection = () => {
         width: { xs: "calc(100% - 58px)", md: "calc(100% - 88px)" },
       }}
     >
-      <Carousel interval={4000} showArrows={false} showStatus={false}>
+      <Carousel autoPlay infiniteLoop showArrows={false} showStatus={false}>
         <Paper
           elevation={4}
           sx={{
@@ -63,9 +65,28 @@ const TestimonialSection = () => {
                   challenger climb and is a great coach.”
                 </Typography>
                 <Divider color="white"></Divider>
-                <Typography variant="h5" sx={{ paddingY: 3 }}>
-                  Janosch (Cloud)
-                </Typography>
+                <Box
+                  sx={{
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    paddingTop: 2,
+                  }}
+                >
+                  <Box
+                    component={"img"}
+                    src={janosch}
+                    sx={{
+                      display: "flex",
+                      height: 43,
+                      maxWidth: 43,
+                      marginRight: 2,
+                    }}
+                  ></Box>
+                  <Typography variant="h5" sx={{ paddingY: 2 }}>
+                    Janosch (Cloud)
+                  </Typography>
+                </Box>
                 <Typography
                   variant="body2"
                   color={"white"}
@@ -117,6 +138,7 @@ const TestimonialSection = () => {
             width: "100%",
             margin: "auto",
             marginBottom: 7,
+            pr: 0,
             backgroundColor: "primary.main",
           }}
         >
@@ -147,9 +169,28 @@ const TestimonialSection = () => {
                   always just a great experience overall.”
                 </Typography>
                 <Divider color="white"></Divider>
-                <Typography variant="h5" sx={{ paddingY: 3 }}>
-                  Nyle
-                </Typography>
+                <Box
+                  sx={{
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    paddingTop: 2,
+                  }}
+                >
+                  <Box
+                    component={"img"}
+                    src={nyle}
+                    sx={{
+                      display: "flex",
+                      height: 43,
+                      maxWidth: 43,
+                      marginRight: 2,
+                    }}
+                  ></Box>
+                  <Typography variant="h5" sx={{ paddingY: 2 }}>
+                    Nyle
+                  </Typography>
+                </Box>
                 <Typography
                   variant="body2"
                   color={"white"}
@@ -182,7 +223,6 @@ const TestimonialSection = () => {
                   src={testimonial_gm}
                   alt="Nyle"
                   sx={{
-                    width: { xs: "0%", md: "80%" },
                     objectFit: "cover",
                   }}
                 />
@@ -276,8 +316,8 @@ const TestimonialSection = () => {
                 src={kende}
                 sx={{
                   display: "flex",
-                  height: 40,
-                  maxWidth: 40,
+                  height: 43,
+                  maxWidth: 43,
                   marginRight: 2,
                 }}
               ></Box>
