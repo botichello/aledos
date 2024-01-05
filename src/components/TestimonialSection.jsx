@@ -16,6 +16,8 @@ import {
 } from "@mui/material";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from "react-responsive-carousel";
+import NavigateNextIcon from "@mui/icons-material/NavigateNext";
+import NavigateBeforeIcon from "@mui/icons-material/NavigateBefore";
 
 const TestimonialSection = () => {
   return (
@@ -24,7 +26,65 @@ const TestimonialSection = () => {
         width: { xs: "calc(100% - 58px)", md: "calc(100% - 88px)" },
       }}
     >
-      <Carousel autoPlay infiniteLoop showArrows={false} showStatus={false}>
+      <Carousel
+        autoPlay
+        infiniteLoop
+        showStatus={false}
+        renderArrowPrev={(clickHandler, hasPrev) => {
+          return hasPrev ? (
+            <div
+              style={{
+                position: "absolute", // for top-0, bottom-0, left-0
+                top: 0,
+                bottom: 0,
+                left: -7,
+                display: "flex", // for flex
+                justifyContent: "center", // for justify-center
+                alignItems: "center", // for items-center
+                p: 3, // for p-3 (padding)
+                opacity: 0.3, // for opacity-30
+                cursor: "pointer", // for cursor-pointer
+                zIndex: 20, // for z-20
+                "&:hover": {
+                  opacity: 1.0, // for hover:opacity-100
+                },
+              }}
+              onClick={clickHandler}
+            >
+              <NavigateBeforeIcon fontSize="large" style={{ color: "white" }} />
+            </div>
+          ) : (
+            <></>
+          );
+        }}
+        renderArrowNext={(clickHandler, hasNext) => {
+          return hasNext ? (
+            <div
+              style={{
+                position: "absolute", // for top-0, bottom-0, left-0
+                top: 0,
+                bottom: 0,
+                right: -7,
+                display: "flex", // for flex
+                justifyContent: "center", // for justify-center
+                alignItems: "center", // for items-center
+                p: 3, // for p-3 (padding)
+                opacity: 0.3, // for opacity-30
+                cursor: "pointer", // for cursor-pointer
+                zIndex: 20, // for z-20
+                "&:hover": {
+                  opacity: 1.0, // for hover:opacity-100
+                },
+              }}
+              onClick={clickHandler}
+            >
+              <NavigateNextIcon fontSize="large" style={{ color: "white" }} />
+            </div>
+          ) : (
+            <></>
+          );
+        }}
+      >
         <Paper
           elevation={4}
           sx={{
