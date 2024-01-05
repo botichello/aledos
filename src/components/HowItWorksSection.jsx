@@ -14,7 +14,10 @@ const HowItWorksSection = () => {
   return (
     <Box
       sx={{
-        width: { xs: "calc(100% - 58px)", md: "calc(100% - 88px)" },
+        width: {
+          xs: "calc(100% - 58px)",
+          md: "calc(100% - 88px)",
+        },
         borderRadius: "10px",
         paddingBottom: 6,
         marginBottom: 6,

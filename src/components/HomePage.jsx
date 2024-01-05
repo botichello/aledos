@@ -246,7 +246,7 @@ export default function HomePage() {
                   color: "white",
                   textAlign: "center",
                   fontWeight: "750",
-                  width: { xs: "80%", md: "100%" },
+                  width: { xs: "80%", md: "80%" },
                   paddingX: 1,
                   textShadow: `
       1px 1px 3px rgba(0, 0, 0, 0.1),
@@ -392,7 +392,7 @@ export default function HomePage() {
                   textAlign: "center",
                   display: "flex",
                   fontWeight: "750",
-                  paddingTop: { xs: 2, sm: 3, md: 4 },
+                  paddingTop: { xs: 4, sm: 4, md: 6 },
                   paddingX: 3,
                   paddingBottom: { xs: 6, sm: 8, md: 10, xl: 12 },
                   textShadow: `
