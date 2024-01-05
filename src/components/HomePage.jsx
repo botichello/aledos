@@ -245,8 +245,8 @@ export default function HomePage() {
                 sx={{
                   color: "white",
                   textAlign: "center",
-                  display: "flex",
                   fontWeight: "750",
+                  width: { xs: "80%", md: "100%" },
                   paddingX: 1,
                   textShadow: `
       1px 1px 3px rgba(0, 0, 0, 0.1),
