@@ -98,7 +98,7 @@ export default function CoachingPage() {
           <Stack
             sx={{
               minWidth: "100%",
-              minHeight: { xs: 1500, sm: 1500, md: 700, lg: 500 },
+              minHeight: { xs: 1500, sm: 1500, md: 800, lg: 500 },
               height: "100%",
               background: "linear-gradient(to bottom, #09000F, #0D1695)",
               backgroundSize: "100% auto",
@@ -143,7 +143,7 @@ export default function CoachingPage() {
                 top: {
                   xs: "-114rem",
                   sm: "-117rem",
-                  md: "-87rem",
+                  md: "-92.5rem",
                   lg: "-94rem",
                   xl: "-122rem",
                 },
