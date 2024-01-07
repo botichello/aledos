@@ -352,8 +352,9 @@ export default function CoachingPage() {
                         variant="h5"
                         fontWeight={600}
                         component="div"
+                        paddingBottom={1}
                       >
-                        1 on 1 Coaching Session (Midlane)
+                        1 on 1 Coaching Session
                       </Typography>
                       <Typography
                         variant="body1"
@@ -470,8 +471,9 @@ export default function CoachingPage() {
                         variant="h5"
                         fontWeight={600}
                         component="div"
+                        paddingBottom={1}
                       >
-                        Monthly Mentorship (Midlane)
+                        Monthly Mentorship
                       </Typography>
                       <Typography
                         variant="body1"
