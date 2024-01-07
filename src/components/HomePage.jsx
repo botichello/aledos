@@ -89,19 +89,19 @@ export default function HomePage() {
     <>
       <Helmet>
         <title>
-          League of Legends Private Coaching | LOL Coaching - Aledos Coaching
+          League of Legends Midlane Coaching | LOL Coaching - Aledos Coaching
         </title>
         <meta
           name="description"
-          content="League of Legends Private Coaching by LoL coach Aledos. Unlock your potential."
+          content="League of Legends Midlane Coaching by LoL coach Aledos. Unlock your potential."
         />
         <meta
           property="og:title"
-          content="League of Legends Private Coaching | LOL Coaching - Aledos Coaching"
+          content="League of Legends Midlane Coaching | LOL Coaching - Aledos Coaching"
         />
         <meta
           property="og:description"
-          content="League of Legends Private Coaching by LoL coach Aledos. Unlock your potential."
+          content="League of Legends Midlane Coaching by LoL coach Aledos. Unlock your potential."
         />
       </Helmet>
       <HeaderHome aboutRef={aboutRef} testimonialRef={testimonialRef} />
@@ -186,7 +186,7 @@ export default function HomePage() {
     `,
                     }}
                   >
-                    LEAGUE OF LEGENDS PRIVATE COACHING
+                    LEAGUE OF LEGENDS MIDLANE COACHING
                   </Typography>
                 </Fade>
                 <Fade in={true} timeout={1000}>

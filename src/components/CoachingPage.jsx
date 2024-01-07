@@ -28,19 +28,19 @@ export default function CoachingPage() {
     <>
       <Helmet>
         <title>
-          League of Legends Private Coaching | LOL Coaching - Aledos Coaching
+          League of Legends Midlane Coaching | LOL Coaching - Aledos Coaching
         </title>
         <meta
           name="description"
-          content="League of Legends Private Coaching by LoL coach Aledos. Unlock your potential."
+          content="League of Legends Midlane Coaching by LoL coach Aledos. Unlock your potential."
         />
         <meta
           property="og:title"
-          content="League of Legends Private Coaching | LOL Coaching - Aledos Coaching"
+          content="League of Legends Midlane Coaching | LOL Coaching - Aledos Coaching"
         />
         <meta
           property="og:description"
-          content="League of Legends Private Coaching by LoL coach Aledos. Unlock your potential."
+          content="League of Legends Midlane Coaching by LoL coach Aledos. Unlock your potential."
         />
       </Helmet>
       <HeaderCoaching></HeaderCoaching>
@@ -233,14 +233,37 @@ export default function CoachingPage() {
                         variant="h5"
                         fontWeight={600}
                         component="div"
+                        paddingBottom={1}
                       >
                         Free Climbing Plan
                       </Typography>
-                      <Typography variant="body1" color="text.secondary">
-                        - Climbing plan
+                      <Typography
+                        variant="body1"
+                        color="text.secondary"
+                        fontWeight={500}
+                      >
+                        - Goal setting
                       </Typography>
-                      <Typography variant="body1" color="text.secondary">
-                        - 30 min
+                      <Typography
+                        variant="body1"
+                        color="text.secondary"
+                        fontWeight={500}
+                      >
+                        - Champion pool
+                      </Typography>
+                      <Typography
+                        variant="body1"
+                        color="text.secondary"
+                        fontWeight={500}
+                      >
+                        - Mindset
+                      </Typography>
+                      <Typography
+                        variant="body1"
+                        color="text.secondary"
+                        fontWeight={500}
+                      >
+                        - Step by step plan to climb
                       </Typography>
                     </CardContent>
                     <CardActions
@@ -315,7 +338,7 @@ export default function CoachingPage() {
                   >
                     <CardMedia
                       component="img"
-                      alt="free"
+                      alt="1on1"
                       image={normalPlanImage}
                       sx={{
                         height: { xs: 190, sm: 210, md: 220 },
@@ -332,14 +355,33 @@ export default function CoachingPage() {
                       >
                         1 on 1 Coaching Session (Midlane)
                       </Typography>
-                      <Typography variant="body1" color="text.secondary">
+                      <Typography
+                        variant="body1"
+                        color="text.secondary"
+                        fontWeight={500}
+                      >
+                        - 2 hour coaching
+                      </Typography>
+                      <Typography
+                        variant="body1"
+                        color="text.secondary"
+                        fontWeight={500}
+                      >
                         - Climbing plan
                       </Typography>
-                      <Typography variant="body1" color="text.secondary">
-                        - Complete VOD review
+                      <Typography
+                        variant="body1"
+                        color="text.secondary"
+                        fontWeight={500}
+                      >
+                        - Full VOD session
                       </Typography>
-                      <Typography variant="body1" color="text.secondary">
-                        - 1:30 hour
+                      <Typography
+                        variant="body1"
+                        color="text.secondary"
+                        fontWeight={500}
+                      >
+                        - Personalized learning objectives
                       </Typography>
                     </CardContent>
                     <CardActions
@@ -414,7 +456,7 @@ export default function CoachingPage() {
                   >
                     <CardMedia
                       component="img"
-                      alt="free"
+                      alt="mentorship"
                       image={proPlanImage}
                       sx={{
                         height: { xs: 190, sm: 210, md: 220 },
@@ -431,16 +473,32 @@ export default function CoachingPage() {
                       >
                         Monthly Mentorship (Midlane)
                       </Typography>
-                      <Typography variant="body1" color="text.secondary">
-                        - Climbing plan
-                      </Typography>
-                      <Typography variant="body1" color="text.secondary">
+                      <Typography
+                        variant="body1"
+                        color="text.secondary"
+                        fontWeight={500}
+                      >
                         - 5 Coaching Sessions
                       </Typography>
-                      <Typography variant="body1" color="text.secondary">
+                      <Typography
+                        variant="body1"
+                        color="text.secondary"
+                        fontWeight={500}
+                      >
+                        - Climbing plan
+                      </Typography>
+                      <Typography
+                        variant="body1"
+                        color="text.secondary"
+                        fontWeight={500}
+                      >
                         - Daily Accountability
                       </Typography>
-                      <Typography variant="body1" color="text.secondary">
+                      <Typography
+                        variant="body1"
+                        color="text.secondary"
+                        fontWeight={500}
+                      >
                         ...
                       </Typography>
                     </CardContent>
