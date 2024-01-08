@@ -130,7 +130,7 @@ const HowItWorksSection = () => {
                 fontSize: "1.1rem",
               }}
             >
-              {isXsOrSm ? "" : "- "}Scedule your private coaching now
+              {isXsOrSm ? "" : "- "}Schedule your private coaching now
             </Typography>
           </Stack>
         </Grid>
