@@ -216,7 +216,7 @@ const HowItWorksSection = () => {
                 fontSize: "1.1rem",
               }}
             >
-              {isXsOrSm ? "" : "- "}Meet me on our scheduled session.
+              {isXsOrSm ? "" : "- "}Show up to the coaching session
             </Typography>
             <Typography
               variant="body1"
@@ -240,8 +240,8 @@ const HowItWorksSection = () => {
                 fontSize: "1.1rem",
               }}
             >
-              {isXsOrSm ? "" : "- "}Learn basic fundamentals and deeper
-              concepts.
+              {isXsOrSm ? "" : "- "}Learn more about the fundamentals and deeper
+              concepts
             </Typography>
             <Typography
               variant="body1"
@@ -265,7 +265,7 @@ const HowItWorksSection = () => {
                 fontSize: "1.1rem",
               }}
             >
-              {isXsOrSm ? "" : "- "}Set goals.
+              {isXsOrSm ? "" : "- "}Set goals and learning objectives
             </Typography>
           </Stack>
         </Grid>
@@ -355,8 +355,32 @@ const HowItWorksSection = () => {
                 fontSize: "1.1rem",
               }}
             >
-              {isXsOrSm ? "" : "- "}Implement what you have learned from our
-              coaching.
+              {isXsOrSm ? "" : "- "}Execute what you've learned
+            </Typography>{" "}
+            <Typography
+              variant="body1"
+              sx={{
+                color: "white",
+                fontWeight: "650",
+                paddingTop: { xs: 2.5, sm: 3, md: 3 },
+                paddingLeft: { xs: 0, sm: 0, md: 3 },
+                textShadow: `
+1px 1px 3px rgba(0, 0, 0, 0.1),
+2px 2px 6px rgba(0, 0, 0, 0.2),
+3px 3px 9px rgba(0, 0, 0, 0.3),
+4px 4px 12px rgba(0, 0, 0, 0.4),
+5px 5px 15px rgba(0, 0, 0, 0.5),
+6px 6px 18px rgba(0, 0, 0, 0.6),
+7px 7px 21px rgba(0, 0, 0, 0.7)
+`,
+                opacity: 1,
+                zIndex: 10,
+                alignSelf: { xs: "center", md: "normal" },
+                textAlign: { xs: "center", md: "left" },
+                fontSize: "1.1rem",
+              }}
+            >
+              {isXsOrSm ? "" : "- "}Reach and fulfill your goals
             </Typography>
             <Typography
               variant="h5"
