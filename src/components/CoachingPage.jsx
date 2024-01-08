@@ -397,7 +397,7 @@ export default function CoachingPage() {
                           variant="h6"
                           sx={{ fontWeight: 650, color: "text.main", pl: 2 }}
                         >
-                          50 €
+                          50 $
                         </Typography>
                       </Box>
                       <Box>
@@ -516,7 +516,7 @@ export default function CoachingPage() {
                           variant="h6"
                           sx={{ fontWeight: 650, color: "text.main", pl: 2 }}
                         >
-                          200 €
+                          200 $
                         </Typography>
                       </Box>
                       <Box>
