@@ -480,7 +480,7 @@ export default function CoachingPage() {
                         color="text.secondary"
                         fontWeight={500}
                       >
-                        - 5 Coaching Sessions
+                        - 6 Coaching Sessions
                       </Typography>
                       <Typography
                         variant="body1"
