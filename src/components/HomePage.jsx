@@ -22,6 +22,7 @@ import theme from "../theme";
 
 import skyImage from "../images/stars.png";
 import TestimonialSection from "./TestimonialSection";
+import FooterSection from "./FooterSection";
 
 export default function HomePage() {
   const [typographyVariant, setTypographyVariant] = useState("h3");
@@ -431,6 +432,7 @@ export default function HomePage() {
             </Stack>
           </Stack>
         </Stack>
+        <FooterSection />
       </Stack>
     </>
   );
