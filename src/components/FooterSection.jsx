@@ -19,8 +19,8 @@ export default function FooterSection() {
           <Box
             component={"img"}
             src={logo}
-            maxHeight={{ xs: 100, sm: 100, md: 150, lg: 150 }}
-            height={{ xs: 130, sm: 130, md: 150, lg: 150 }}
+            maxHeight={{ xs: 110, sm: 100, md: 150, lg: 180 }}
+            height={{ xs: 110, sm: 130, md: 150, lg: 180 }}
             sx={{ display: "flex" }}
           />
         </Link>
@@ -57,7 +57,7 @@ export default function FooterSection() {
           paddingBottom={2}
         >
           <Link
-            href="https://www.aledos.lol/"
+            href="https://discord.gg/GMpMn66HGv"
             target="_blank"
             sx={{ height: "26px", width: "26px", paddingY: 2, paddingX: 0.75 }}
           >
@@ -75,7 +75,7 @@ export default function FooterSection() {
             </Button>
           </Link>
           <Link
-            href="https://www.aledos.lol/"
+            href="https://www.youtube.com/channel/UCDL-hsJO0MTkr6rTlvN1bOw"
             target="_blank"
             sx={{ height: "26px", width: "26px", paddingY: 2, paddingX: 0.75 }}
           >
