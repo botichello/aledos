@@ -15,3 +15,8 @@ code {
 button {
   font-family: 'Roboto', sans-serif;
 }
+
+.custom-height-width {
+  height: 25px;
+  width: 25px;
+}
