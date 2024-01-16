@@ -57,7 +57,7 @@ export default function FooterSection() {
           paddingBottom={2}
         >
           <Link
-            href="https://discord.gg/GMpMn66HGv"
+            href="https://discord.gg/MABRcMbc8x"
             target="_blank"
             sx={{ height: "26px", width: "26px", paddingY: 2, paddingX: 0.75 }}
           >
