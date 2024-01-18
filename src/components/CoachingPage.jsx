@@ -40,7 +40,7 @@ export default function CoachingPage() {
 
       try {
         const response = await axios.get(
-          "https://api.calendly.com/scheduled_events",
+          "https://api.calendly.com/activity_log_entries",
           { headers: { Authorization: `Bearer ${calendlyApiKey}` } }
         );
         if (!response.ok) {
