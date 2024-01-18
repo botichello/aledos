@@ -39,10 +39,9 @@ export default function CoachingPage() {
       //const calendlyApiKey = process.env.CALENDLY_API_KEY; // Access the environment variable
 
       try {
-        const response = await axios.get(
-          "https://api.calendly.com/activity_log_entries",
-          { headers: { Authorization: `Bearer ${calendlyApiKey}` } }
-        );
+        const response = await axios.get("https://api.calendly.com", {
+          headers: { Authorization: `Bearer ${calendlyApiKey}` },
+        });
         if (!response.ok) {
           throw new Error(`Error: ${response.statusText}`);
         }
