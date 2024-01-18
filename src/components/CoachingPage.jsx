@@ -23,6 +23,7 @@ import skyImage from "../images/night_bg_small.jpg";
 import proPlanImage from "../images/kassa.jpg";
 import { PopupButton } from "react-calendly";
 import axios from "axios";
+import { ConstructionOutlined } from "@mui/icons-material";
 
 export default function CoachingPage() {
   const [eventCount, setEventCount] = useState(null);
@@ -48,9 +49,9 @@ export default function CoachingPage() {
         const calendly_data = await response.data;
         const eventCount = calendly_data.length; // Your logic to count events
 
-        response.status(200).json({ eventCount });
+        console.log(eventCount);
       } catch (error) {
-        response.status(500).json({ message: error.message });
+        console.error("failed :/");
       }
     };
     // try {
