@@ -5,7 +5,7 @@ export default async (req, res) => {
     const calendlyApiKey = process.env.CALENDLY_API_KEY; // Access the environment variable
     
     try {
-    const response = await fetch('https://api.calendly.com/users/', {
+    const response = await fetch('https://api.calendly.com/scheduled_events', {
         headers: { 'Authorization': `Bearer ${calendlyApiKey}` }
     });
     if (!response.ok) {
