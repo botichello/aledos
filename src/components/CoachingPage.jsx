@@ -24,17 +24,30 @@ import proPlanImage from "../images/kassa.jpg";
 import { PopupButton } from "react-calendly";
 
 export default function CoachingPage() {
+  const [eventCount, setEventCount] = useState(null);
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState(null);
+
   useEffect(() => {
-    fetch("/api/calendly")
-      .then((response) => response.json())
-      .then((data) => {
-        // Handle your data here
-        console.log("Scheduled Events Count:", data.eventCount);
-      })
-      .catch((error) => {
-        // Handle error here
-        console.error("Error fetching data:", error);
-      });
+    const fetchEventCount = async () => {
+      setIsLoading(true);
+      try {
+        // Replace '/api/calendly' with the path to your serverless function
+        const response = await fetch("/api/calendly");
+        if (!response.ok) {
+          throw new Error(`Error: ${response.statusText}`);
+        }
+        const data = await response.json();
+        console.log(data);
+        setEventCount(data.eventCount);
+      } catch (err) {
+        setError(err.message);
+      } finally {
+        setIsLoading(false);
+      }
+    };
+
+    fetchEventCount();
   }, []);
   return (
     <>
