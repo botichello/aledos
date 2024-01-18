@@ -48,9 +48,9 @@ export default function CoachingPage() {
         const calendly_data = await response.data;
         const eventCount = calendly_data.length; // Your logic to count events
 
-        res.status(200).json({ eventCount });
+        response.status(200).json({ eventCount });
       } catch (error) {
-        res.status(500).json({ message: error.message });
+        response.status(500).json({ message: error.message });
       }
     };
     // try {
