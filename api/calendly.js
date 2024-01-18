@@ -1,6 +1,7 @@
 // api/calendly.js
 import fetch from 'node-fetch';
 
+
 export default async (req, res) => {
     const calendlyApiKey = process.env.CALENDLY_API_KEY; // Access the environment variable
     
