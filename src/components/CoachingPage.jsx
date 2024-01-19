@@ -33,24 +33,6 @@ export default function CoachingPage() {
   useEffect(() => {
     const fetchEventCount = async () => {
       setIsLoading(true);
-      //const calendlyApiKey = process.env.CALENDLY_API_KEY; // Access the environment variable
-
-      //   try {
-      //     const response = await axios.get(
-      //       `https://api.calendly.com/user_busy_times?user=https%3A%2F%2Fapi.calendly.com%2Fusers%2F93997760-d172-458b-b67b-69d6f0f31ee7&start_time=2024-${formattedFirstDay}T20%3A00%3A00.000000Z&end_time=2024-${formattedLastDay}T24%3A00%3A00.000000Z`,
-      //       { headers: { Authorization: `Bearer ${calendlyApiKey}` } }
-      //     );
-      //     if (!response.ok) {
-      //       throw new Error(`Error: ${response.statusText}`);
-      //     }
-      //     const calendly_data = await response.data;
-      //     const eventCount = calendly_data.length; // Your logic to count events
-
-      //     console.log(eventCount);
-      //   } catch (error) {
-      //     console.error("failed :/");
-      //   }
-      // };
       try {
         // Replace '/api/calendly' with the path to your serverless function
         const response = await fetch("/api/calendly");
@@ -527,19 +509,26 @@ export default function CoachingPage() {
                           transform: "translate(50%, -50%) rotate(45deg)",
                         }}
                       ></div>
-                      <Typography
-                        variant="h6"
-                        sx={{
-                          color: "white",
-                          transform: "rotate(45deg)",
-                          position: "absolute",
 
-                          top: 12,
-                          right: 8,
-                        }}
-                      >
-                        8 left
-                      </Typography>
+                      {!isLoading ? (
+                        <Fade in={!isLoading} timeout={200}>
+                          <Typography
+                            variant="h6"
+                            sx={{
+                              color: "white",
+                              transform: "rotate(45deg)",
+                              position: "absolute",
+
+                              top: 12,
+                              right: 8,
+                            }}
+                          >
+                            {5 - (eventCount ? eventCount : 0)} left
+                          </Typography>
+                        </Fade>
+                      ) : (
+                        <></>
+                      )}
                       <CardMedia
                         component="img"
                         alt="mentorship"
@@ -677,34 +666,6 @@ export default function CoachingPage() {
                         zIndex: -1, // lower z-index
                       }}
                     >
-                      <div
-                        style={{
-                          width: 0,
-                          height: 0,
-                          borderStyle: "solid",
-                          borderWidth: "0 50px 50px 0",
-                          borderColor:
-                            "transparent #480A35 transparent transparent",
-                          position: "absolute",
-                          top: 0,
-                          right: 0,
-                          zIndex: 3,
-                          display: "flex",
-                          alignItems: "center",
-                          justifyContent: "center",
-                          transform: "translate(50%, -50%)",
-                        }}
-                      >
-                        <Typography
-                          variant="body2"
-                          style={{
-                            color: "white",
-                            transform: "rotate(-45deg)",
-                          }}
-                        >
-                          8 left
-                        </Typography>
-                      </div>
                       <CardContent sx={{ pl: 3, pt: 3, flexGrow: 1 }}>
                         {" "}
                         {/* flexGrow to make it expand */}
@@ -729,6 +690,16 @@ export default function CoachingPage() {
                           variant="body1"
                           color="#F3EBFF"
                           fontWeight={500}
+                          pt={1}
+                        >
+                          - Exclusive personalized videos <br></br>{" "}
+                          &nbsp;&nbsp;&nbsp;about your learning objectives
+                        </Typography>
+                        <Typography
+                          variant="body1"
+                          color="#F3EBFF"
+                          fontWeight={500}
+                          pt={1}
                         >
                           - Complete support
                         </Typography>
@@ -736,15 +707,9 @@ export default function CoachingPage() {
                           variant="body1"
                           color="#F3EBFF"
                           fontWeight={500}
+                          pt={1}
                         >
-                          - Weekly 30 minute mindset call
-                        </Typography>
-                        <Typography
-                          variant="body1"
-                          color="#F3EBFF"
-                          fontWeight={500}
-                        >
-                          - Membership on Discord server
+                          - Discord membership
                         </Typography>
                       </CardContent>
                     </Card>

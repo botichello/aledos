@@ -6,19 +6,14 @@ export default async (req, res) => {
 // Get the current year and month
 
     try {
-    // const response = await axios.get(`https://api.calendly.com/user_busy_times?user=https%3A%2F%2Fapi.calendly.com%2Fusers%2F93997760-d172-458b-b67b-69d6f0f31ee7&start_time=2024-${formattedFirstDay}T20%3A00%3A00.000000Z&end_time=2024-${formattedLastDay}T24%3A00%3A00.000000Z`, { headers: { Authorization: `Bearer ${calendlyApiKey}` } })
-    // if (!response.ok) {
-    //     throw new Error(`Error: ${response.statusText}`);
-    // }
-        const currentDate = new Date();
-        const firstDayOfMonth = new Date(currentDate.getFullYear(), currentDate.getMonth(), 1);
-        const lastDayOfMonth = new Date(currentDate.getFullYear(), currentDate.getMonth() + 1, 0);
+        const thirtyDaysBefore = new Date();
+        thirtyDaysBefore.setDate(thirtyDaysBefore.getDate() - 30);
 
-        // Format dates to ISO string and adjust time
-        const minStartTime = firstDayOfMonth.toISOString().split('T')[0] + "T00:00:00.000000Z";
-        const maxStartTime = lastDayOfMonth.toISOString().split('T')[0] + "T23:59:59.999999Z";
+        // Format the date in YYYY-MM-DD format
+        const minStartTime = thirtyDaysBefore.toISOString().split('T')[0] + 'T24:00:00.000000Z';
 
-        const response = await fetch(`https://api.calendly.com/scheduled_events?user=https%3A%2F%2Fapi.calendly.com%2Fusers%2F93997760-d172-458b-b67b-69d6f0f31ee7&min_start_time=${encodeURIComponent(minStartTime)}&max_start_time=${encodeURIComponent(maxStartTime)}&count=100`, {
+        
+        const response = await fetch(`https://api.calendly.com/scheduled_events?user=https%3A%2F%2Fapi.calendly.com%2Fusers%2F93997760-d172-458b-b67b-69d6f0f31ee7&min_start_time=${encodeURIComponent(minStartTime)}&count=100`, {
             headers: { 'Authorization': `${calendlyApiKey}` }
         });
     if (!response.ok) {
