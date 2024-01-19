@@ -53,9 +53,7 @@ export default function CoachingPage() {
       // };
       try {
         // Replace '/api/calendly' with the path to your serverless function
-        const response = await fetch(
-          "https://aledos-git-development-botichellos-projects.vercel.app/api/calendly"
-        );
+        const response = await fetch("https://aledos.lol/api/calendly");
         if (!response.ok) {
           throw new Error(`Error: ${response.statusText}`);
         }
