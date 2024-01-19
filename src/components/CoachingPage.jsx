@@ -492,40 +492,43 @@ export default function CoachingPage() {
                         zIndex: 30,
                       }}
                     >
-                      <div
-                        style={{
-                          width: 0,
-                          height: 0,
-                          borderStyle: "solid",
-                          borderWidth: "0 120px 120px 0",
-                          borderColor:
-                            "transparent transparent #5A0C43 transparent",
-                          position: "absolute",
-                          top: 0,
-                          right: 0, // Ensure it's above the card content
-                          display: "flex",
-                          alignItems: "center",
-                          justifyContent: "center",
-                          transform: "translate(50%, -50%) rotate(45deg)",
-                        }}
-                      ></div>
-
                       {!isLoading ? (
-                        <Fade in={!isLoading} timeout={200}>
-                          <Typography
-                            variant="h6"
-                            sx={{
-                              color: "white",
-                              transform: "rotate(45deg)",
-                              position: "absolute",
+                        <>
+                          <Fade in={true} timeout={300}>
+                            <div
+                              style={{
+                                width: 0,
+                                height: 0,
+                                borderStyle: "solid",
+                                borderWidth: "0 120px 120px 0",
+                                borderColor:
+                                  "transparent transparent #5A0C43 transparent",
+                                position: "absolute",
+                                top: 0,
+                                right: 0, // Ensure it's above the card content
+                                display: "flex",
+                                alignItems: "center",
+                                justifyContent: "center",
+                                transform: "translate(50%, -50%) rotate(45deg)",
+                              }}
+                            ></div>
+                          </Fade>
+                          <Fade in={true} timeout={650}>
+                            <Typography
+                              variant="h6"
+                              sx={{
+                                color: "white",
+                                transform: "rotate(45deg)",
+                                position: "absolute",
 
-                              top: 12,
-                              right: 8,
-                            }}
-                          >
-                            {5 - (eventCount ? eventCount : 0)} left
-                          </Typography>
-                        </Fade>
+                                top: 12,
+                                right: 8,
+                              }}
+                            >
+                              {5 - (eventCount ? eventCount : 0)} left
+                            </Typography>
+                          </Fade>
+                        </>
                       ) : (
                         <></>
                       )}
