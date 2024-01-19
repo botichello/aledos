@@ -14,9 +14,9 @@ export default async (req, res) => {
     if (!response.ok) {
         throw new Error(`Error: ${response.statusText}`);
     }
-    const calendly_data = await response.data;
-    console.log('Data:', calendly_data);
-    const eventCount = calendly_data.length; // Your logic to count events
+    const calendlyData = await response.json();
+    console.log('Data:', calendlyData);
+    const eventCount = calendlyData.collection ? calendlyData.collection.length : 0;
 
     res.status(200).json({ eventCount });
 } catch (error) {
