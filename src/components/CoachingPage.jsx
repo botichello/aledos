@@ -619,7 +619,7 @@ export default function CoachingPage() {
                               },
                             }}
                           >
-                            300 €
+                            300 $
                           </Typography>
                           <Typography
                             variant="h5"
@@ -629,7 +629,7 @@ export default function CoachingPage() {
                               pl: 2,
                             }}
                           >
-                            200 €
+                            200 $
                           </Typography>
                         </Box>
                         <Box>
