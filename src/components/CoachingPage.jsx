@@ -308,25 +308,31 @@ export default function CoachingPage() {
                           Free
                         </Typography>
                       </Box>
-                      <Box>
-                        <PopupButton
-                          url={"https://calendly.com/aledos/climbingplan"}
-                          text="BOOK NOW"
-                          rootElement={document.getElementById("root")}
-                          styles={{
-                            fontWeight: 550,
-                            boxShadow: "0 0 0.5rem rgba(0, 0, 0, 0.3)",
-                            color: "#fff",
-                            backgroundColor: "#58336D",
-                            border: 0,
-                            outline: 0,
-                            padding: "0.8rem 1.2rem",
-                            fontSize: "0.9rem",
-                            borderRadius: "0.25rem",
-                            cursor: "pointer",
-                          }}
-                        ></PopupButton>
-                      </Box>
+                      {!isLoading ? (
+                        <Fade in={true} timeout={800}>
+                          <Box>
+                            <PopupButton
+                              url={"https://calendly.com/aledos/climbingplan"}
+                              text="BOOK NOW"
+                              rootElement={document.getElementById("root")}
+                              styles={{
+                                fontWeight: 550,
+                                boxShadow: "0 0 0.5rem rgba(0, 0, 0, 0.3)",
+                                color: "#fff",
+                                backgroundColor: "#58336D",
+                                border: 0,
+                                outline: 0,
+                                padding: "0.8rem 1.2rem",
+                                fontSize: "0.9rem",
+                                borderRadius: "0.25rem",
+                                cursor: "pointer",
+                              }}
+                            ></PopupButton>
+                          </Box>
+                        </Fade>
+                      ) : (
+                        <></>
+                      )}
                     </CardActions>
                   </Card>
                 </Box>
@@ -427,25 +433,33 @@ export default function CoachingPage() {
                           50 $
                         </Typography>
                       </Box>
-                      <Box>
-                        <PopupButton
-                          url={"https://calendly.com/aledos/coaching-session"}
-                          text="BOOK NOW"
-                          rootElement={document.getElementById("root")}
-                          styles={{
-                            fontWeight: 550,
-                            boxShadow: "0 0 0.5rem rgba(0, 0, 0, 0.3)",
-                            color: "#fff",
-                            backgroundColor: "#58336D",
-                            border: 0,
-                            outline: 0,
-                            padding: "0.8rem 1.2rem",
-                            fontSize: "0.9rem",
-                            borderRadius: "0.25rem",
-                            cursor: "pointer",
-                          }}
-                        ></PopupButton>
-                      </Box>
+                      {!isLoading ? (
+                        <Fade in={true} timeout={800}>
+                          <Box>
+                            <PopupButton
+                              url={
+                                "https://calendly.com/aledos/coaching-session"
+                              }
+                              text="BOOK NOW"
+                              rootElement={document.getElementById("root")}
+                              styles={{
+                                fontWeight: 550,
+                                boxShadow: "0 0 0.5rem rgba(0, 0, 0, 0.3)",
+                                color: "#fff",
+                                backgroundColor: "#58336D",
+                                border: 0,
+                                outline: 0,
+                                padding: "0.8rem 1.2rem",
+                                fontSize: "0.9rem",
+                                borderRadius: "0.25rem",
+                                cursor: "pointer",
+                              }}
+                            ></PopupButton>
+                          </Box>
+                        </Fade>
+                      ) : (
+                        <></>
+                      )}
                     </CardActions>
                   </Card>
                 </Box>
@@ -632,25 +646,46 @@ export default function CoachingPage() {
                             200 $
                           </Typography>
                         </Box>
-                        <Box>
-                          <PopupButton
-                            url={"https://calendly.com/aledos/mentorship"}
-                            text="BOOK NOW"
-                            rootElement={document.getElementById("root")}
-                            styles={{
-                              fontWeight: 550,
-                              boxShadow: "0 0 0.5rem rgba(0, 0, 0, 0.3)",
-                              color: "#fff",
-                              backgroundColor: "#58336D",
-                              border: 0,
-                              outline: 0,
-                              padding: "0.8rem 1.2rem",
-                              fontSize: "0.9rem",
-                              borderRadius: "0.25rem",
-                              cursor: "pointer",
-                            }}
-                          ></PopupButton>
-                        </Box>
+                        {!isLoading ? (
+                          5 - eventCount > 0 ? (
+                            <Fade in={true} timeout={800}>
+                              <Box>
+                                <PopupButton
+                                  url={"https://calendly.com/aledos/mentorship"}
+                                  text="BOOK NOW"
+                                  rootElement={document.getElementById("root")}
+                                  styles={{
+                                    fontWeight: 550,
+                                    boxShadow: "0 0 0.5rem rgba(0, 0, 0, 0.3)",
+                                    color: "#fff",
+                                    backgroundColor: "#58336D",
+                                    border: 0,
+                                    outline: 0,
+                                    padding: "0.8rem 1.2rem",
+                                    fontSize: "0.9rem",
+                                    borderRadius: "0.25rem",
+                                    cursor: "pointer",
+                                  }}
+                                ></PopupButton>
+                              </Box>
+                            </Fade>
+                          ) : (
+                            <Fade in={true} timeout={800}>
+                              <Button
+                                variant="contained"
+                                size="large"
+                                disabled
+                                sx={{
+                                  fontWeight: 650,
+                                }}
+                              >
+                                SOLD OUT
+                              </Button>
+                            </Fade>
+                          )
+                        ) : (
+                          <></>
+                        )}
                       </CardActions>
                     </Card>
                     <Card
