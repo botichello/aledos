@@ -19,7 +19,7 @@ export default async (req, res) => {
         const maxStartTime = lastDayOfMonth.toISOString().split('T')[0] + "T23:59:59.999999Z";
 
         const response = await fetch(`https://api.calendly.com/scheduled_events?user=https%3A%2F%2Fapi.calendly.com%2Fusers%2F93997760-d172-458b-b67b-69d6f0f31ee7&min_start_time=${encodeURIComponent(minStartTime)}&max_start_time=${encodeURIComponent(maxStartTime)}&count=100`, {
-            headers: { 'Authorization': `Bearer ${calendlyApiKey}` }
+            headers: { 'Authorization': `${calendlyApiKey}` }
         });
     if (!response.ok) {
         throw new Error(`Error: ${response.statusText}`);
