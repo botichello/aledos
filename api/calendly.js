@@ -26,10 +26,12 @@ const formattedLastDay = (lastDay.getMonth() + 1).toString().padStart(2, '0') + 
         throw new Error(`Error: ${response.statusText}`);
     }
     const calendly_data = await response.data;
+    console.log('Data:', calendly_data);
     const eventCount = calendly_data.length; // Your logic to count events
 
     res.status(200).json({ eventCount });
 } catch (error) {
+    console.error('Error:', error);
     res.status(500).json({ message: error.message });
 }
 };
