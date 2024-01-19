@@ -33,26 +33,6 @@ export default function CoachingPage() {
   useEffect(() => {
     const fetchEventCount = async () => {
       setIsLoading(true);
-      const year = now.getFullYear();
-      const month = now.getMonth(); // Note: January is 0, December is 11
-
-      // Get the first day of the current month
-      const firstDay = new Date(year, month, 1);
-      const formattedFirstDay =
-        (firstDay.getMonth() + 1).toString().padStart(2, "0") +
-        "-" +
-        firstDay.getDate().toString().padStart(2, "0");
-
-      // Get the last day of the current month
-      // We set the date to the first day of the next month and then go one day back
-      const lastDay = new Date(year, month + 1, 0);
-      const formattedLastDay =
-        (lastDay.getMonth() + 1).toString().padStart(2, "0") +
-        "-" +
-        lastDay.getDate().toString().padStart(2, "0");
-
-      const calendlyApiKey =
-        "eyJraWQiOiIxY2UxZTEzNjE3ZGNmNzY2YjNjZWJjY2Y4ZGM1YmFmYThhNjVlNjg0MDIzZjdjMzJiZTgzNDliMjM4MDEzNWI0IiwidHlwIjoiUEFUIiwiYWxnIjoiRVMyNTYifQ.eyJpc3MiOiJodHRwczovL2F1dGguY2FsZW5kbHkuY29tIiwiaWF0IjoxNzA1NjA2MzIzLCJqdGkiOiJkM2JlMDhhOS00ZDQxLTRlMWUtYmMwOC04OTI5MDliNDczZTciLCJ1c2VyX3V1aWQiOiI5Mzk5Nzc2MC1kMTcyLTQ1OGItYjY3Yi02OWQ2ZjBmMzFlZTcifQ.-yixkq4bPbIrOirywQvLwTUPCn7PfBg_ydkjgYjSwhJ0eldYsGbM5ivcpKfqwonfU4Q-Rc5j078TpH2HnNvG7g";
       //const calendlyApiKey = process.env.CALENDLY_API_KEY; // Access the environment variable
 
       //   try {
