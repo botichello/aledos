@@ -647,7 +647,7 @@ export default function CoachingPage() {
                           </Typography>
                         </Box>
                         {!isLoading ? (
-                          5 - eventCount > 0 ? (
+                          5 - (eventCount ? eventCount : 0) > 0 ? (
                             <Fade in={true} timeout={800}>
                               <Box>
                                 <PopupButton
