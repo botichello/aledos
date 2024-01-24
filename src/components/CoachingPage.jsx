@@ -539,7 +539,7 @@ export default function CoachingPage() {
                                 right: 8,
                               }}
                             >
-                              {5 - (eventCount ? eventCount : 0)} left
+                              {4 - (eventCount ? eventCount : 0)} left
                             </Typography>
                           </Fade>
                         </>
