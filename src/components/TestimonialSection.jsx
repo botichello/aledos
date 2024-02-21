@@ -1,9 +1,12 @@
 import React from "react";
 import testimonial_chall from "../images/testimonial_chall.png";
 import testimonial_gm from "../images/testimonial_gm.png";
+import testimonial_master from "../images/orca_master.png";
 import kende from "../images/kende.png";
 import nyle from "../images/nyle.png";
 import janosch from "../images/janosch.png";
+import orca from "../images/orca.png";
+import terrific from "../images/terrific.png";
 import {
   Stack,
   Box,
@@ -310,6 +313,108 @@ const TestimonialSection = () => {
               backgroundColor: "primary.main",
             }}
           >
+            <Grid container>
+              <Grid item xs={12} sm={12} md={7}>
+                <Box
+                  sx={{
+                    flex: 1,
+                    px: 4.5,
+                    pt: { xs: 4, md: 8 },
+                    pb: 3,
+                    display: "flex",
+                    flexDirection: "column",
+                    justifyContent: "center",
+                    color: "common.white",
+                  }}
+                >
+                  <Typography
+                    variant="body1"
+                    sx={{
+                      mb: 2,
+                      fontFamily: "Poppins, sans-serif",
+                    }}
+                  >
+                    “Aledos has helped me personally out of many slumps.
+                    <br />A lot of coaches, expect you to apply rigid rules, but
+                    with Aledos, I always got a specific game plan. <br />
+                    <br />A coach might tell you, as champ X, do not play
+                    aggressive against champ Y. But in our coaching sessions, he
+                    helped me see the reasoning behind it. <br />
+                    <br />
+                    This coaching session directly resulted in me reaching
+                    master tier, 2 months later after hitting diamond 4 and
+                    slumping”
+                  </Typography>
+                  <Divider color="white"></Divider>
+                  <Box
+                    sx={{
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      paddingTop: 2,
+                    }}
+                  >
+                    <Box
+                      component={"img"}
+                      src={orca}
+                      sx={{
+                        display: "flex",
+                        height: 43,
+                        maxWidth: 43,
+                        marginRight: 2,
+                      }}
+                    ></Box>
+                    <Typography variant="h5" sx={{ paddingY: 2 }}>
+                      Orca
+                    </Typography>
+                  </Box>
+                </Box>
+              </Grid>
+              <Grid
+                item
+                xs={12}
+                sm={12}
+                md={5}
+                display={{ xs: "none", sm: "none", md: "block" }}
+              >
+                <Box
+                  sx={{
+                    flex: 1,
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "flex-end",
+                    backgroundColor: "transparent",
+                  }}
+                >
+                  <Box
+                    component="img"
+                    src={testimonial_master}
+                    alt="Cloud"
+                    sx={{
+                      width: "80%",
+                      objectFit: "cover",
+                    }}
+                  />
+                </Box>
+              </Grid>
+            </Grid>
+          </Paper>
+        </Box>
+        <Box sx={{ display: "flex", justifyContent: "center" }}>
+          <Paper
+            elevation={4}
+            sx={{
+              display: "flex",
+              alignItems: "center",
+              borderRadius: "10px",
+              overflow: "hidden",
+              maxWidth: { xs: "600px", md: "800px" },
+              width: "calc(100%-10px)",
+              marginX: "5px",
+              marginBottom: 7,
+              backgroundColor: "primary.main",
+            }}
+          >
             <Box
               sx={{
                 flex: 1,
@@ -389,6 +494,73 @@ const TestimonialSection = () => {
                 ></Box>
                 <Typography variant="h5" sx={{ paddingY: 2 }}>
                   Kevendeve
+                </Typography>
+              </Box>
+            </Box>
+          </Paper>
+        </Box>
+        <Box sx={{ display: "flex", justifyContent: "center" }}>
+          <Paper
+            elevation={4}
+            sx={{
+              display: "flex",
+              alignItems: "center",
+              borderRadius: "10px",
+              overflow: "hidden",
+              maxWidth: { xs: "600px", md: "800px" },
+              width: "calc(100%-10px)",
+              marginX: "5px",
+              marginBottom: 7,
+              backgroundColor: "primary.main",
+            }}
+          >
+            <Box
+              sx={{
+                flex: 1,
+                pb: 3,
+                pt: { xs: 4, md: 6 },
+                px: { xs: 5, sm: 5, md: 6.5 },
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "center",
+                color: "common.white",
+              }}
+            >
+              <Typography
+                variant="h6"
+                sx={{
+                  mb: 2,
+                  fontFamily: "Poppins, sans-serif",
+                }}
+              >
+                “Great kassadin player, very knowledgeable and good at the game.
+                Consistently high elo + an amazing teacher. Good way with
+                explaining his thought process and a very reliable person to
+                reach out to if in dire need for assistance! <br /> <br />I was
+                diamond 2 when I met him and peaked 250 lp master tier with his
+                help and knowledge.”
+              </Typography>
+              <Divider color="white"></Divider>
+              <Box
+                sx={{
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  paddingTop: 3,
+                }}
+              >
+                <Box
+                  component={"img"}
+                  src={terrific}
+                  sx={{
+                    display: "flex",
+                    height: 43,
+                    maxWidth: 43,
+                    marginRight: 2,
+                  }}
+                ></Box>
+                <Typography variant="h5" sx={{ paddingY: 2 }}>
+                  Terrific
                 </Typography>
               </Box>
             </Box>
