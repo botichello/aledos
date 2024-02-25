@@ -539,7 +539,7 @@ export default function CoachingPage() {
                                 right: 8,
                               }}
                             >
-                              {4 - (eventCount ? eventCount : 0)} left
+                              {7 - (eventCount ? eventCount : 0)} left
                             </Typography>
                           </Fade>
                         </>
@@ -647,7 +647,7 @@ export default function CoachingPage() {
                           </Typography>
                         </Box>
                         {!isLoading ? (
-                          5 - (eventCount ? eventCount : 0) > 0 ? (
+                          7 - (eventCount ? eventCount : 0) > 0 ? (
                             <Fade in={true} timeout={800}>
                               <Box>
                                 <PopupButton
