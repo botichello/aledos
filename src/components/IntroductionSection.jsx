@@ -148,7 +148,7 @@ const IntroductionSection = () => {
 `,
               }}
             >
-              The face of Kassadin.
+              Kassadin expert.
             </Typography>
             <Typography
               variant="h5"
