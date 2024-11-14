@@ -27,7 +27,6 @@ const IntroductionSection = () => {
           <Box
             component={"img"}
             src={videoThumbnail}
-            // kivenni a bordert!
             border={1.5}
             borderColor={"#CBC2D7"}
             //
