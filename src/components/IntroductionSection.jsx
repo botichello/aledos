@@ -128,7 +128,7 @@ const IntroductionSection = () => {
 `,
               }}
             >
-              Ex Challenger.
+              Challenger.
             </Typography>
             <Typography
               variant="h5"
