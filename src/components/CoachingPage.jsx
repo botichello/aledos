@@ -18,13 +18,30 @@ import {
 import HeaderCoaching from "./HeaderCoaching";
 import FooterSection from "./FooterSection";
 import coachingHeroFlames from "../images/coaching_flames_crop_clean_upscaled.png";
-import freePlanImage from "../images/Kassadin_new.jpg";
+import academyImage from "../images/Kassadin_new.jpg";
 import normalPlanImage from "../images/cosmic-kassadin-wallpapers.jpg";
 import skyImage from "../images/night_bg_small.jpg";
 import proPlanImage from "../images/kassa.jpg";
 import { PopupButton } from "react-calendly";
 import axios from "axios";
 import { ConstructionOutlined } from "@mui/icons-material";
+
+const bookingButtonStyle = {
+  boxSizing: "border-box",
+  minWidth: "7.5rem",
+  fontFamily: "Arial, sans-serif",
+  fontSize: "0.9rem",
+  fontWeight: 550,
+  lineHeight: "normal",
+  textAlign: "center",
+  boxShadow: "0 0 0.5rem rgba(0, 0, 0, 0.3)",
+  color: "#fff",
+  backgroundColor: "#58336D",
+  border: 0,
+  padding: "0.8rem 1.2rem",
+  borderRadius: "0.25rem",
+  cursor: "pointer",
+};
 
 export default function CoachingPage() {
   const [eventCount, setEventCount] = useState(null);
@@ -99,10 +116,10 @@ export default function CoachingPage() {
                 height: "100%",
                 minHeight: {
                   xs: "20.5rem",
-                  sm: "25rem",
-                  md: "35rem",
-                  lg: "45rem",
-                  xl: "59rem",
+                  sm: "22rem",
+                  md: "32rem",
+                  lg: "42rem",
+                  xl: "56rem",
                 },
                 display: "flex",
                 alignItems: "center", // Vertical alignment
@@ -220,123 +237,54 @@ export default function CoachingPage() {
                 xs={12}
                 md={6}
                 lg={4}
-                display={"flex"}
+                display="flex"
                 justifyContent="center"
                 sx={{ pr: 3 }}
               >
-                <Box
+                <Card
                   sx={{
+                    maxWidth: 350,
                     width: "100%",
+                    maxHeight: 500,
+                    height: "100%",
+                    borderRadius: "10px",
+                    border: 1,
+                    borderColor: "#E7D7FF",
+                    backgroundColor: "#E7D7FF",
                     display: "flex",
-                    justifyContent: "center",
+                    flexDirection: "column",
                   }}
                 >
-                  <Card
-                    sx={{
-                      maxWidth: 350,
-                      width: "100%",
-                      maxHeight: 500,
-                      height: "100%",
-                      borderRadius: "10px",
-                      border: 1,
-                      borderColor: "#E7D7FF",
-                      backgroundColor: "#E7D7FF",
-                      display: "flex", // Make sure the card uses flex layout
-                      flexDirection: "column", // Stack children vertically
-                    }}
-                  >
-                    <CardMedia
-                      component="img"
-                      alt="free"
-                      image={freePlanImage}
-                      sx={{
-                        height: { xs: 190, sm: 210, md: 220 },
-                      }}
-                    />
-                    <CardContent sx={{ flexGrow: 1 }}>
-                      {" "}
-                      {/* flexGrow to make it expand */}
-                      <Typography
-                        gutterBottom
-                        variant="h5"
-                        fontWeight={600}
-                        component="div"
-                        paddingBottom={1}
-                      >
-                        Free Climbing Plan
+                  <CardMedia
+                    component="img"
+                    alt="Kassadin"
+                    image={academyImage}
+                    sx={{ height: { xs: 190, sm: 210, md: 220 } }}
+                  />
+                  <CardContent sx={{ flexGrow: 1 }}>
+                    <Typography variant="h5" component="h2" fontWeight={600} gutterBottom>
+                      Join the Midlane Academy
+                    </Typography>
+                  </CardContent>
+                  <CardActions sx={{ justifyContent: "space-between", alignItems: "flex-end" }}>
+                    <Box sx={{ pl: 2 }}>
+                      <Typography variant="body2" color="text.secondary">
+                        Use code:
                       </Typography>
-                      <Typography
-                        variant="body1"
-                        color="text.secondary"
-                        fontWeight={500}
-                      >
-                        - Goal setting
+                      <Typography variant="h6" sx={{ fontWeight: 650, color: "text.main" }}>
+                        ALEDOS10
                       </Typography>
-                      <Typography
-                        variant="body1"
-                        color="text.secondary"
-                        fontWeight={500}
-                      >
-                        - Champion pool
-                      </Typography>
-                      <Typography
-                        variant="body1"
-                        color="text.secondary"
-                        fontWeight={500}
-                      >
-                        - Mindset
-                      </Typography>
-                      <Typography
-                        variant="body1"
-                        color="text.secondary"
-                        fontWeight={500}
-                      >
-                        - Step by step plan to climb
-                      </Typography>
-                    </CardContent>
-                    <CardActions
-                      sx={{
-                        display: "flex",
-                        justifyContent: "space-between",
-                        alignItems: "center",
-                      }}
+                    </Box>
+                    <a
+                      href="https://wtl.lol/aledos"
+                      target="_blank"
+                      rel="noopener"
+                      style={{ ...bookingButtonStyle, textDecoration: "none" }}
                     >
-                      <Box sx={{ display: "flex", alignItems: "center" }}>
-                        <Typography
-                          variant="h6"
-                          sx={{ fontWeight: 650, color: "text.main", pl: 2 }}
-                        >
-                          Free
-                        </Typography>
-                      </Box>
-                      {!isLoading ? (
-                        <Fade in={true} timeout={800}>
-                          <Box>
-                            <PopupButton
-                              url={"https://calendly.com/aledos/climbingplan"}
-                              text="BOOK NOW"
-                              rootElement={document.getElementById("root")}
-                              styles={{
-                                fontWeight: 550,
-                                boxShadow: "0 0 0.5rem rgba(0, 0, 0, 0.3)",
-                                color: "#fff",
-                                backgroundColor: "#58336D",
-                                border: 0,
-                                outline: 0,
-                                padding: "0.8rem 1.2rem",
-                                fontSize: "0.9rem",
-                                borderRadius: "0.25rem",
-                                cursor: "pointer",
-                              }}
-                            ></PopupButton>
-                          </Box>
-                        </Fade>
-                      ) : (
-                        <></>
-                      )}
-                    </CardActions>
-                  </Card>
-                </Box>
+                      JOIN NOW
+                    </a>
+                  </CardActions>
+                </Card>
               </Grid>
               <Grid
                 item
@@ -431,7 +379,7 @@ export default function CoachingPage() {
                           variant="h6"
                           sx={{ fontWeight: 650, color: "text.main", pl: 2 }}
                         >
-                          50 $
+                          75 $
                         </Typography>
                       </Box>
                       {!isLoading ? (
@@ -443,18 +391,7 @@ export default function CoachingPage() {
                               }
                               text="BOOK NOW"
                               rootElement={document.getElementById("root")}
-                              styles={{
-                                fontWeight: 550,
-                                boxShadow: "0 0 0.5rem rgba(0, 0, 0, 0.3)",
-                                color: "#fff",
-                                backgroundColor: "#58336D",
-                                border: 0,
-                                outline: 0,
-                                padding: "0.8rem 1.2rem",
-                                fontSize: "0.9rem",
-                                borderRadius: "0.25rem",
-                                cursor: "pointer",
-                              }}
+                              styles={bookingButtonStyle}
                             ></PopupButton>
                           </Box>
                         </Fade>
@@ -580,7 +517,7 @@ export default function CoachingPage() {
                           color="text.secondary"
                           fontWeight={500}
                         >
-                          - 6 Coaching Sessions
+                          - 4 Coaching Sessions
                         </Typography>
                         <Typography
                           variant="body1"
@@ -655,18 +592,7 @@ export default function CoachingPage() {
                                   url={"https://calendly.com/aledos/mentorship"}
                                   text="BOOK NOW"
                                   rootElement={document.getElementById("root")}
-                                  styles={{
-                                    fontWeight: 550,
-                                    boxShadow: "0 0 0.5rem rgba(0, 0, 0, 0.3)",
-                                    color: "#fff",
-                                    backgroundColor: "#58336D",
-                                    border: 0,
-                                    outline: 0,
-                                    padding: "0.8rem 1.2rem",
-                                    fontSize: "0.9rem",
-                                    borderRadius: "0.25rem",
-                                    cursor: "pointer",
-                                  }}
+                                  styles={bookingButtonStyle}
                                 ></PopupButton>
                               </Box>
                             </Fade>
