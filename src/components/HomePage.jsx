@@ -1,18 +1,6 @@
 import React, { useRef, useLayoutEffect, useEffect, useState } from "react";
 import { Helmet } from "react-helmet";
-import { Link as LinkRouter } from "react-router-dom";
-import {
-  AppBar,
-  Box,
-  Toolbar,
-  IconButton,
-  Typography,
-  Button,
-  Container,
-  Stack,
-  Grid,
-  Fade,
-} from "@mui/material";
+import { Box, Typography, Stack, Fade } from "@mui/material";
 import HeaderHome from "../components/HeaderHome";
 import { useScroll } from "./ScrollContext";
 import aledosHero from "../images/gen_2_hero_o.png";

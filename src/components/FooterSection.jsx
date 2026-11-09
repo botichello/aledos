@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { Stack, Box, Link, Button, Divider } from "@mui/material";
 import logo from "../images/logo_2_no_bg_no_hand_2.png";
 

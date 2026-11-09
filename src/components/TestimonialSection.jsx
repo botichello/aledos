@@ -8,11 +8,9 @@ import janosch from "../images/janosch.png";
 import orca from "../images/orca.png";
 import terrific from "../images/terrific.png";
 import {
-  Stack,
   Box,
   Typography,
   Paper,
-  useTheme,
   Grid,
   Link as MuiLink,
   Divider,

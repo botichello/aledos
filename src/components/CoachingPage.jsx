@@ -1,12 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { Helmet } from "react-helmet";
 import {
-  AppBar,
   Box,
   Stack,
   Grid,
-  Toolbar,
-  IconButton,
   Typography,
   Button,
   Fade,
@@ -23,8 +20,6 @@ import normalPlanImage from "../images/cosmic-kassadin-wallpapers.jpg";
 import skyImage from "../images/night_bg_small.jpg";
 import proPlanImage from "../images/kassa.jpg";
 import { PopupButton } from "react-calendly";
-import axios from "axios";
-import { ConstructionOutlined } from "@mui/icons-material";
 
 const bookingButtonStyle = {
   boxSizing: "border-box",
@@ -46,7 +41,6 @@ const bookingButtonStyle = {
 export default function CoachingPage() {
   const [eventCount, setEventCount] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
-  const [error, setError] = useState(null);
 
   useEffect(() => {
     const fetchEventCount = async () => {
@@ -60,8 +54,8 @@ export default function CoachingPage() {
         const data = await response.json();
         console.log(data);
         setEventCount(data.eventCount);
-      } catch (err) {
-        setError(err.message);
+      } catch {
+        setEventCount(null);
       } finally {
         setIsLoading(false);
       }
@@ -278,7 +272,7 @@ export default function CoachingPage() {
                     <a
                       href="https://wtl.lol/aledos"
                       target="_blank"
-                      rel="noopener"
+                      rel="noopener noreferrer"
                       style={{ ...bookingButtonStyle, textDecoration: "none" }}
                     >
                       JOIN NOW

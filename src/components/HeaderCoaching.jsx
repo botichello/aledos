@@ -4,10 +4,7 @@ import {
   AppBar,
   Box,
   Toolbar,
-  IconButton,
-  Typography,
   Button,
-  Container,
   Link,
 } from "@mui/material";
 import { useScroll } from "./ScrollContext";

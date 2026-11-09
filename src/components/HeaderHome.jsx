@@ -1,13 +1,9 @@
 import React from "react";
-import { Link as LinkRouter } from "react-router-dom";
 import {
   AppBar,
   Box,
   Toolbar,
-  IconButton,
-  Typography,
   Button,
-  Container,
   Link,
 } from "@mui/material";
 import logo from "../images/logo_2_no_bg_no_hand_2.png";
